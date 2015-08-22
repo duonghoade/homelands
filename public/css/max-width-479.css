@@ -1,0 +1,117 @@
+/* start max-width 479 */
+@media (max-width: 479px) {
+	#main-head #top-head h1 {
+		height: auto;
+	}
+	/*-------------- content ------------------------*/
+	#container-search #tab-search a.bt-tab {
+		width: 50%;
+		text-align: center;
+		margin-right: 0;
+	}
+	#component-search #box-input {
+		width: 100%;
+		margin-right: 0;
+	}
+	#txt-des #img-des #box-img {
+		width: 100%;
+		padding: 0;
+	}
+	#main-tailormade #step-des #destination {
+		width: 100%;
+		margin: 10px 0;
+	}
+	#main-tailormade #content-step #bt-bottom-step {
+		margin: 10px 0;
+	}
+	#main-tailormade #content-step #bt-bottom-step #step-count {
+		width: 100%;
+		height: 35px;
+		line-height: 35px;
+		margin-bottom: 10px;
+	}
+	#main-tailormade #content-step #bt-bottom-step a.bt-prev,
+	#main-tailormade #content-step #bt-bottom-step a.bt-next {
+		position: static;
+		line-height: 35px;
+		height: 35px;
+	}
+	#main-tailormade #content-step #bt-bottom-step a.bt-next {
+		float: right;
+	}
+	#footer #f-box {
+		width: 100%;
+	} 
+	/*------------------ Contact us ---------------------------*/
+	#form-contact #input-sl {
+		width: 100%;
+	}
+	#form-contact input {
+		width: 100%;
+	}
+	/*------------------- cruise detail ---------------------------*/
+	#right-expert {
+		margin-bottom: 0 !important;
+	}
+	#best-cruise #right-cruise #txt-highlights p {
+		width: 100%;
+		border-right: 0;
+	}
+	#best-cruise #right-cruise #txt-highlights #viewmap {
+		width: 100%;
+		margin-left: 0;
+	}
+	#best-cruise #right-cruise #top-cruise h2 {
+		margin-top: 0;
+	}
+	#best-cruise #right-cruise #top-cruise h2 a {
+		font-size: 14px;
+	}
+	#main-cr-link #cr-links {
+		width: 100%;
+		padding: 0;
+	}
+	#main-box-link #cat-links {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	#des-ct {
+	    background: none repeat scroll 0 0 #f6f5f3;
+	    float: left;
+	    margin: 0 1% 20px;
+	    width: 98%;
+	}
+	#best-tour2 #right-tour #top-t #left-nametour #day {
+		margin-bottom: 10px;
+	}
+	#best-tour2 #right-tour #top-t #left-nametour h2,
+	#best-tour2 #right-tour #top-t #left-nametour #des-tour,
+	#best-tour2 #right-tour #txt-highlights ul li {
+		width: 100%;
+	}
+	#filter ul {
+	    width: 100%;
+	    margin-bottom: 15px;
+	} 
+	#filter span.line {
+		display: none;
+	}
+	#box2-input {
+		width: 100%;
+		margin: 10px 0;
+	}
+		#box-travelguide {
+		width: 100%;
+		margin: 0 0 20px;
+	}
+	#l-dt-travelguide #box-other-guide #b-also-guide img {
+		width: 100%;
+		margin-right: 0;
+		height: auto;
+	}
+	#l-dt-travelguide #box-other-guide #b-also-guide h3 {
+		width: 100%;
+	}
+}
+/* end max-width 479 */

@@ -1,0 +1,29 @@
+#content_left.col-lg-3.col-md-3.hidden-sm.hidden-xs
+  .boxright
+    .icon1 Hỗ trợ trực tuyến
+    .box1
+      .banner-images
+        %a.img-top{:href => "#"}
+          %img{:src => "http://noithattiencuong.vn/images/banner-hotline.png", width: "100%"}/
+      .bgsupport
+        .titlesupport TƯ VẤN KHÁCH HÀNG  (Ms : Quỳnh)
+        %div{:style => "margin-bottom: 4px;font-weight: bold; color:red"}
+          0973 188 591
+        .titlesupport (Mr : Cường)
+        %div{:style => "margin-bottom: 4px;font-weight: bold; color:red"}
+          0988 094 485
+        %div{:style => "margin-bottom: 4px;"}
+          %a{:href => "skype:1092119229?call"}
+            %img{:src => "/images/skype.png"}/
+          %a{:target => "_blank", :href => "https://www.facebook.com/pages/N%E1%BB%99i-th%E1%BA%A5t-Ti%E1%BA%BFn-C%C6%B0%E1%BB%9Dng/939684249400553?fref=ts"}
+            %img{:src => "/images/facebook.png"}/
+  .boxright
+    .box1
+      - foreach ($categories as $category)
+        .box-category
+          = $category->name
+        %ul#menu1.padd4all
+          - foreach ($category->subs as $sub)
+            %li
+              %a{:href => URL::route('show_category', [$sub->id, $sub->make($sub->name)])}
+                = $sub->name

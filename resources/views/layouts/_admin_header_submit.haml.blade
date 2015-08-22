@@ -1,0 +1,25 @@
+#khung
+  #main
+    #toolbar.toolbar-list
+      %ul
+        %li#toolbar-new
+          %a.toolbar{:href => "javascript:void(0);", :onclick => "javascript:document.image.submit();"}
+            %span.icon-32-save
+            Lưu
+        %li#toolbar-refresh
+          %a.toolbar{:href => "javascript:void(0);", :onclick => "javascript:document.image.reset();"}
+            %span.icon-32-refresh
+            Reset
+        %li.divider
+        %li#toolbar-help
+          %a.toolbar{:href => "#messages", :rel => "modal"}
+            %span.icon-32-help
+            Trợ giúp
+        %li#toolbar-unpublish
+          %a.toolbar{:href => ""}
+            %span.icon-32-cancel
+            Hủy
+      .clr
+    .pagetitle.icon-48-category-add
+      %h2
+    .clr

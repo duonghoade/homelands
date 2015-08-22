@@ -1,0 +1,66 @@
+[
+  { "name":"Sản phẩm nội thất",
+    "subs": [
+      {"name":"Giá kệ"},
+      {"name":"Kệ tivi"},
+      {"name":"Giá sách"},
+      {"name":"Bàn trà"},
+      {"name":"Ghế sofa"},
+      {"name":"Giường Trẻ Em"},
+      {"name":"Giường ngủ"},
+      {"name":"Tủ quần áo"},
+      {"name":"Bàn trang điểm"},
+      {"name":"Vách ngăn phòng"},
+      {"name":"Đồng hồ nội thất"},
+      {"name":"Tủ giầy"},
+      {"name":"Tủ bếp"},
+      {"name":"Bàn ghế ăn"},
+      {"name":"Bàn học sinh"},
+      {"name":"Kính nghệ thuật"}
+    ]
+  },
+  { "name":"Sàn gỗ tự nhiên",
+    "subs": [
+      {"name":"Sàn gỗ Căm Xe"},
+      {"name":"Sàn gỗ Sồi"},
+      {"name":"Sàn gỗ Chiu Liu"},
+      {"name":"Sàn gỗ Giá Tỵ"},
+      {"name":"Sàn gỗ Tràm Bông vàng"},
+      {"name":"Sàn gỗ Giáng Hương"},
+      {"name":"Sàn gỗ Gõ Đỏ"},
+      {"name":"Sàn gỗ Thích Cứng (Maple)"},
+      {"name":"Sàn gỗ Walnut"}
+    ]
+  },
+  { "name":"Sàn gỗ công nghiệp",
+    "subs": [
+      {"name":"Sàn gỗ Smart Floor"},
+      {"name":"Sàn gỗ Eurohome"},
+      {"name":"Sàn gỗ Kendall"},
+      {"name":"Sàn gỗ Newsky"},
+      {"name":"Sàn gỗ Gago"},
+      {"name":"Sàn gỗ Manhattan"},
+      {"name":"Sàn gỗ xương cá"},
+      {"name":"Sàn gỗ Kahn"},
+      {"name":"Sàn gỗ King floor"},
+      {"name":"Sàn gỗ Kosmos"},
+      {"name":"Sàn gỗ Excel Floor"}
+    ]
+  },
+  { "name":"Trần thạch cao",
+    "subs": [
+      {"name":"Trần thạch cao nhà hàng"},
+      {"name":"Trần thạch cao phòng khách"},
+      {"name":"Trần thạch cao phòng ngủ đẹp"},
+      {"name":"Trần thạch cao cửa hàng"}
+    ]
+  },
+  { "name":"Nội thất phòng tắm",
+    "subs": [
+      {"name":"Chậu rửa"},
+      {"name":"Vòi hoa sen"},
+      {"name":"Gương nhà tắm"}
+    ]
+  }
+]
+

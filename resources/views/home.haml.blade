@@ -1,0 +1,60 @@
+@extends('layouts.application')
+@section('title')
+Sàn gỗ - Nội thất Tiến Cường
+@stop
+@section('home')
+#content_main.col-lg-9.col-md-9.col-sm-12.col-xs-12
+  @include('layouts._slider')
+  .boxmain
+    .box-title
+      %h2.titlemain Sản phẩm nổi bật
+      %span.titlemain3
+    .box-sp
+      - foreach ($special as $pro)
+        .col-lg-3.col-md-3.col-sm-6.col-xs-12.bgproduct
+          .boximg
+            .box-img
+              %a{:href => URL::route('show', array($pro->id, $pro->title()))}
+                %img.img-thumbnail.bdimg{:alt => $pro->name, :src => $pro->photos->first()['img'], height: "265px", :title => $pro->name, :alt => $pro->name}/
+            .proName
+              %a{:href => URL::route('show', array($pro->id, $pro->title())), :title => $pro->name}
+                = $pro->name
+            .price_detail
+              %a{:href => URL::route('show', array($pro->id, $pro->title())), :title => $pro->name}
+                = $pro->price
+  .boxmain
+    .box-title
+      %h2.titlemain Sản phẩm được yêu thích
+      %span.titlemain3
+    .box-sp
+      - foreach ($favorites as $pro)
+        .col-lg-3.col-md-3.col-sm-6.col-xs-12.bgproduct
+          .boximg
+            .box-img
+              %a{:href => URL::route('show', array($pro->id, $pro->title()))}
+                %img.img-thumbnail.bdimg{:alt => $pro->name, :src => $pro->photos->first()['img'], height: "265px", :title => $pro->name, :alt => $pro->name}/
+            .proName
+              %a{:href => URL::route('show', array($pro->id, $pro->title())), :title => $pro->name}
+                = $pro->name
+            .price_detail
+              %a{:href => URL::route('show', array($pro->id, $pro->title())), :title => $pro->name}
+                = $pro->price
+  .boxmain
+    .box-title
+      %h2.titlemain Nội thất thông minh
+      %span.titlemain3
+    .box-sp
+      - foreach ($smarts as $pro)
+        .col-lg-3.col-md-3.col-sm-6.col-xs-12.bgproduct
+          .boximg
+            .box-img
+              %a{:href => URL::route('show', array($pro->id, $pro->title()))}
+                %img.img-thumbnail.bdimg{:alt => $pro->name, :src => $pro->photos->first()['img'], height: "265px", :title => $pro->name, :alt => $pro->name}/
+            .proName
+              %a{:href => URL::route('show', array($pro->id, $pro->title())), :title => $pro->name}
+                = $pro->name
+            .price_detail
+              %a{:href => URL::route('show', array($pro->id, $pro->title())), :title => $pro->name}
+                = $pro->price
+  %br/
+@stop

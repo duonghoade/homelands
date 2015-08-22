@@ -1,0 +1,121 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "vi", :name => "language"}/
+    %meta{:content => "All", :name => "indexation"}/
+    %meta{:content => "VN-HN", :name => "geo.region"}/
+    %meta{:content => "general", :name => "rating"}/
+    %meta{:content => "3600", "http-equiv" => "refresh"}/
+    %meta{:content => "noodp,index,follow", :name => "robots"}/
+    %meta{:content => "vi_VN", :property => "og:locale"}/
+    %meta{:content => "san go, san go tu nhien, san go cong nghiep, go ngoai troi, sàn gỗ tự nhiên, sàn gỗ công nghiệp, sàn gỗ ngoài trời, san go gia re, gia san go", :name => "keywords"}/
+    %meta{:content => "Cung cấp sàn gỗ tự nhiên, sàn gỗ công nghiệp, phụ kiện sàn gỗ. San go tu nhien, san go cong nghiep, phu kien san go", :name => "description"}/
+    %title  @yield('title')
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %link{:href => "/css/reset.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/css/styles.css", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "/js/jquery.min.js", :type => "text/javascript"}
+    %script{:src => "/js/bootstrap.min.js", :type => "text/javascript"}
+    %meta{:content => "nxGDo8Vw-ILlkoCX2ZT_XKN-cPptod_ZqFfCHxtRA4o", :name => "google-site-verification"}/
+  %body{style: "position: relative;min-height: 100%;top: 0px;background: url(/images/background.jpg) 50% 0% fixed rgb(88, 173, 34);"}
+    .container{style: "background:white"}
+      #adv
+        %script{:src => "/js/quangcaotruot.js", :type => "text/javascript"}
+        :css
+          #slideads {
+              position: relative;
+              margin: auto;
+              width: 100%;
+          }
+          #slidetruottrai {
+              position: absolute;
+              left: -175px;
+              top: -8px;
+              z-index: 99;
+          }
+          #slidetruotphai {
+              top: -8px;
+              position: absolute;
+              right: -175px;
+              z-index: 99;
+          }
+        #slideads
+          #slidetruottrai.slidetruottrai
+          #slidetruotphai.slidetruotphai
+      :javascript
+        $(document).ready(function () {
+            $(window).bind("resize", methodToFixLayout);
+            function methodToFixLayout(e) {
+                var winWidth = $(window).width();
+                //alert(winWidth);
+                if (winWidth > 1280) {
+                    $('#adv').css('display', 'block');
+                } else {
+                    $('#adv').css('display', 'none');
+                }
+            }
+        });
+      #header
+        .row{style: "position:relative"}
+          .col-md-4.col-sm-12.site-logo
+            %a.img-logo{:href => "/"}
+              %img{:alt => "Đồ gỗ nội thất", :src => "http://noithattiencuong.vn/images/logo.png"}/
+          .col-md-5.col-sm-6.menu-search{style: "margin-top: 30px;"}
+            .search-box
+              %form{:action => "#"}
+                .input-group
+                  %input.form-control{:placeholder => "Tìm kiếm sản phẩm", :type => "text"}/
+                  %span.input-group-btn
+                    %i.fa.fa-search.search-btn
+                    %button.btn.btn-primary{:type => "submit"} Tìm kiếm
+          .col-md-3.col-sm-6.hotline-top{style: "margin-top: 32px;"}
+            .hot-line
+              %a.img-hotline{:href => "#"}
+                %img{:src => "/images/ic-phone.png"}/
+              %span.title-hotline{style: "font-weight: bold;font-size:15px"} HOTLINE: 0973 188 591
+        .row
+          .col-lg-10{style: "font-size:15px"}
+            Địa chỉ: Phòng 1207 - Tòa nhà B6A, khu đô thị Nam Trung Yên, phường Trung Hòa, Quận Cầu Giấy, Hà Nội
+        .navbar_outer
+          %link{:href => "/css/ddsmoothmenu.css", :rel => "stylesheet", :type => "text/css"}/
+          %script{:src => "/js/ddsmoothmenu.js", :type => "text/javascript"}
+          :javascript
+            ddsmoothmenu.init({
+                mainmenuid: "smoothmenu1", //menu DIV id
+                orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+                classname: 'ddsmoothmenu3', //class added to menu's outer DIV
+                contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+            })
+
+            ddsmoothmenu.init({
+                mainmenuid: "smoothmenu2", //Menu DIV id
+                orientation: 'v', //Horizontal or vertical menu: Set to "h" or "v"
+                classname: 'ddsmoothmenu-v', //class added to menu's outer DIV
+                method: 'hover', // set to 'hover' (default) or 'toggle'
+                arrowswap: false, // enable rollover effect on menu arrow images?
+                contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+            })
+          @include('layouts._menu')
+      #wrapper
+        @include('layouts._left')
+        @yield('home')
+        .clear
+      @include('layouts._footer')
+    :javascript
+      $(function () {
+          $("img").each(function () {
+              if ($(this).attr("alt") != undefined) {
+                  if ($(this).attr("alt") == "") {
+                      $(this).attr("alt", "Noi That Tien Cuong");
+                  }
+              } else {
+                  $(this).attr("alt", "Noi that Tien Cuong");
+              }
+          });
+      (function() {var _h1= document.getElementsByTagName('title')[0] || false;
+      var product_name = ''; if(_h1){product_name= _h1.textContent || _h1.innerText;}var ga = document.createElement('script'); ga.type = 'text/javascript';
+      ga.src = '//live.vnpgroup.net/js/web_client_box.php?hash=93f4bb8949961adf3a3ec12e7dd9eaa4&data=eyJzc29faWQiOjIwNzM5MjMsImhhc2giOiJiOWM0YmZhYTc2OTA3ZTEyMzc4OTA1OTM5MzhiMTgzOSJ9&pname='+product_name;
+      var s = document.getElementsByTagName('script');s[0].parentNode.insertBefore(ga, s[0]);})();
+      });

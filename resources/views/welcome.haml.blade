@@ -1,0 +1,807 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title Do Go My Nghe
+    %link{:href => "css/style.css", :rel => "stylesheet"}/
+    %link{:href => "css/responsive.css", :rel => "stylesheet"}/
+    %link{:href => "css/max-width-1199.css", :rel => "stylesheet"}/
+    %link{:href => "css/max-width-991.css", :rel => "stylesheet"}/
+    %link{:href => "css/max-width-767.css", :rel => "stylesheet"}/
+    %link{:href => "css/max-width-479.css", :rel => "stylesheet"}/
+    %link{:href => "css/flexslider.css", :rel => "stylesheet"}/
+    %link{:href => "css/jquery.bxslider.css", :rel => "stylesheet"}/
+    %link{:href => "css/owl.carousel.css", :rel => "stylesheet"}/
+    %link{:href => "font-awesome-4.2.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "jquery/jquery-1.9.1.js"}
+    %script{:src => "jquery/main.js"}
+    %script{:src => "jquery/owl.carousel.min.js"}
+    %script{:src => "jquery/jquery.flexslider-min.js"}
+    %script{:src => "jquery/jquery.jquery.bxslider.js"}
+    %script{:src => "jquery/superslide.2.1.js", :type => "text/javascript"}
+    %script{:src => "jquery/jquery.scrollbox.js"}
+    %script{:src => "bootstrap.3.2.0/js/bootstrap.min.js"}
+  %body
+    .header-top
+      .container
+        .row
+          / BEGIN TOP BAR LEFT PART
+          .col-md-6.col-sm-6.top-left
+            %ul
+              %li
+                Xin chào ! Chào mừng đến với website
+                %span Dogomynghe.com
+          / END TOP BAR LEFT PART
+          / BEGIN TOP BAR MENU
+          .col-md-6.col-sm-6.top-right
+            %ul
+              %li
+                %a{:href => "index.html"} Dogomynghe.com
+              %li
+                %a{:href => "login.html"} Đăng nhập
+          / END TOP BAR MENU
+    / END TOP BAR
+    / BEGIN HEADER CENTER
+    .header-center
+      .container
+        .row
+          .col-md-4.col-sm-12.site-logo
+            %a.img-logo{:href => "index.html"}
+              %img{:alt => "Aobongda", :src => "images/logo.png"}/
+          / BEGIN TOP SEARCH
+          .col-md-5.col-sm-6.menu-search
+            .search-box
+              %form{:action => "#"}
+                .input-group
+                  %input.form-control{:placeholder => "Tìm kiếm sản phẩm", :type => "text"}/
+                  %span.input-group-btn
+                    %i.fa.fa-search.search-btn
+                    %button.btn.btn-primary{:type => "submit"} Tìm kiếm
+          / END TOP SEARCH
+          .col-md-3.col-sm-6.hotline-top
+            .hot-line
+              %a.img-hotline{:href => "#"}
+                %img{:src => "images/ic-phone.png"}/
+              %span.title-hotline HOTLINE: 0983 373 819
+    / HEADER CENTER END
+    / BEGIN HEADER BOTTOM
+    .header-navigation
+      .container
+        .row
+          .menu-home
+            %ul
+              %li.active
+                %a{:href => "index.html", :target => "_blank"} Trang chủ
+              %li.dropdown
+                %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "#"}
+                  Sàn gỗ tự nhiên
+                / BEGIN DROPDOWN MENU
+                %ul.dropdown-menu
+                  %li.dropdown-submenu
+                    %a{:href => "#"} Việt Nam
+                  %li
+                    %a{:href => "#"} Nhật Bản
+                  %li
+                    %a{:href => "#"} Hàn Quốc
+                  %li
+                    %a{:href => "#"} Hà Lan
+                  %li
+                    %a{:href => "#"} Tây Ban Nha
+                  %li
+                    %a{:href => "#"} Brazil
+                / END DROPDOWN MENU
+              %li.dropdown.dropdown-megamenu
+                %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "#"}
+                  Sàn gỗ công nghiệp
+                %ul.dropdown-menu
+                  %li
+                    .header-navigation-content
+                      .row
+                        .col-md-4.header-navigation-col
+                          %h4 Giải Ngoại Hạng Anh
+                          %ul
+                            %li
+                              %a{:href => "#"} Manchester United
+                            %li
+                              %a{:href => "#"} Arsenal
+                            %li
+                              %a{:href => "#"} Chelsea
+                            %li
+                              %a{:href => "#"} Liverpool
+                            %li
+                              %a{:href => "#"} Tottenham
+                        .col-md-4.header-navigation-col
+                          %h4 Giải Tây Ban Nha
+                          %ul
+                            %li
+                              %a{:href => "#"} Manchester United
+                            %li
+                              %a{:href => "#"} Arsenal
+                            %li
+                              %a{:href => "#"} Chelsea
+                            %li
+                              %a{:href => "#"} Liverpool
+                            %li
+                              %a{:href => "#"} Tottenham
+                        .col-md-4.header-navigation-col
+                          %h4 Giải Italia
+                          %ul
+                            %li
+                              %a{:href => "#"} Manchester United
+                            %li
+                              %a{:href => "#"} Arsenal
+                            %li
+                              %a{:href => "#"} Chelsea
+                            %li
+                              %a{:href => "#"} Liverpool
+                            %li
+                              %a{:href => "#"} Tottenham
+              %li.dropdown
+                %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "#"}
+                  Sàn gỗ giá rẻ
+                %ul.dropdown-menu
+                  %li.dropdown-submenu
+                    %a{:href => "#"} Giầy Nike loại 1
+                  %li
+                    %a{:href => "#"} Giầy Adidas loại 1
+                  %li
+                    %a{:href => "#"} Giầy Nike loại 2
+                  %li
+                    %a{:href => "#"} Giầy Adidas loại 2
+                  %li
+                    %a{:href => "#"} Giầy Adidas loại 3
+              %li.dropdown
+                %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "#"}
+                  Sàn nhựa Vinyl
+                %ul.dropdown-menu
+                  %li.active
+                    %a{:href => "#"} Bóng xanh
+                  %li
+                    %a{:href => "#"} Bóng đỏ
+                  %li
+                    %a{:href => "#"} Bóng vàng
+                  %li
+                    %a{:href => "#"} Bóng tím
+                  %li
+                    %a{:href => "#"} Bóng hồng
+              %li.dropdown
+                %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "#"}
+                  Sàn gỗ châu âu
+              %li.dropdown
+                %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "#"}
+                  Sàn gỗ nhập khẩu
+              %li.dropdown
+                %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "#"}
+                  Vật liệu ốp tường
+              %li.dropdown
+                %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "#"}
+                  Vật liệu ốp trần
+              %li.dropdown.lh-menu
+                %a{:href => "#", :target => "_blank"} Liên hệ
+    .header-bottom
+      .container
+        .row
+    / END HEADER BOTTOM
+    / BEGIN SLIDER
+    .slide-home
+      .container
+        .row
+          .slider
+            .flexslider
+              %ul.slides
+                %li
+                  %a{:href => "#"}
+                    %img{:src => "images/2.jpg"}/
+                %li
+                  %a{:href => "#"}
+                    %img{:src => "images/4.jpg"}/
+                %li
+                  %a{:href => "#"}
+                    %img{:src => "images/5.jpg"}/
+          :javascript
+            $(window).load(function() {
+              $('.flexslider').flexslider({
+                animation: "slide"
+              });
+            });
+    / END SLIDER
+    .main-home
+      .container
+        .row
+          .col-md-3.col-sm-3.main-left
+            .categories-left
+              %h2.box-title Danh mục
+              .box-content
+                %ul.box-category
+                  %li
+                    %a{:href => "#"} Sàn gỗ tự nhiên
+                    %ul
+                      %li
+                        %a{:href => "#"} Việt Nam
+                      %li
+                        %a{:href => "#"} Nhật Bản
+                      %li
+                        %a{:href => "#"} Hàn Quốc
+                      %li
+                        %a{:href => "#"} Hà Lan
+                      %li
+                        %a{:href => "#"} Tây Ban Nha
+                      %li
+                        %a{:href => "#"} Brazil
+                  %li
+                    %a{:href => "#"} Sàn gỗ giá rẻ
+                    %ul
+                      %li
+                        %a{:href => "#"} Manchester United
+                      %li
+                        %a{:href => "#"} Arsenal
+                      %li
+                        %a{:href => "#"} Chelsea
+                      %li
+                        %a{:href => "#"} Liverpool
+                      %li
+                        %a{:href => "#"} Tottenham
+                  %li
+                    %a{:href => "#"} Sàn gỗ công nghiệp
+                    %ul
+                      %li
+                        %a{:href => "#"} Manchester United
+                      %li
+                        %a{:href => "#"} Arsenal
+                      %li
+                        %a{:href => "#"} Chelsea
+                      %li
+                        %a{:href => "#"} Liverpool
+                      %li
+                        %a{:href => "#"} Tottenham
+                  %li
+                    %a{:href => "#"} Sàn gỗ châu âu
+                    %ul
+                      %li
+                        %a{:href => "#"} Manchester United
+                      %li
+                        %a{:href => "#"} Arsenal
+                      %li
+                        %a{:href => "#"} Chelsea
+                      %li
+                        %a{:href => "#"} Liverpool
+                      %li
+                        %a{:href => "#"} Tottenham
+                  %li
+                    %a{:href => "#"} Sàn nhựa vinyl
+                    %ul
+                      %li
+                        %a{:href => "#"} Manchester United
+                      %li
+                        %a{:href => "#"} Arsenal
+                      %li
+                        %a{:href => "#"} Chelsea
+                      %li
+                        %a{:href => "#"} Liverpool
+                      %li
+                        %a{:href => "#"} Tottenham
+                  %li
+                    %a{:href => "#"} Sàn gỗ nhập khẩu
+                    %ul
+                      %li
+                        %a{:href => "#"} Manchester United
+                      %li
+                        %a{:href => "#"} Arsenal
+                      %li
+                        %a{:href => "#"} Chelsea
+                      %li
+                        %a{:href => "#"} Liverpool
+                      %li
+                        %a{:href => "#"} Tottenham
+                  %li
+                    %a{:href => "#"} Vật liệu ốp tường
+                    %ul
+                      %li
+                        %a{:href => "#"} Manchester United
+                      %li
+                        %a{:href => "#"} Arsenal
+                      %li
+                        %a{:href => "#"} Chelsea
+                      %li
+                        %a{:href => "#"} Liverpool
+                      %li
+                        %a{:href => "#"} Tottenham
+                  %li
+                    %a{:href => "#"} Vật liệu ốp trần
+                    %ul
+                      %li
+                        %a{:href => "#"} Manchester United
+                      %li
+                        %a{:href => "#"} Arsenal
+                      %li
+                        %a{:href => "#"} Chelsea
+                      %li
+                        %a{:href => "#"} Liverpool
+                      %li
+                        %a{:href => "#"} Tottenham
+            .top-hotline
+              .banner-images
+                %a.img-top{:href => "#"}
+                  %img{:src => "images/banner-hotline.png"}/
+              %p.title Hỗ trợ trực tuyến 24/7
+              .phone-hotline
+                %a{:href => "#"}
+                  %img{:src => "images/ic-phone.png"}/
+                .info-phone
+                  %span Hotline 1 : 0983 373 819
+                  %span Hotline 2 : 0965 585 368
+            .banner-left
+              .banner-images
+                %a{:href => "#"}
+                  %img{:src => "images/img.jpg"}/
+          .col-md-9.col-sm-9.main-middle
+            .main-top
+              .title-sp
+                %h2 Sàn gỗ tự nhiên
+              .info-sp
+                .row-1
+                  %ul
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/001.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/001.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/001.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/001.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                .row-2
+                  %ul
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/001.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/001.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/001.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/001.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    /
+                      <div class="customNavigation">
+                      <a class="btn prev">Previous</a>
+                      <a class="btn next">Next</a>
+                      </div>
+                      <script type="text/javascript">
+                      $(document).ready(function() {
+                      $("#owl-demo2").owlCarousel({
+                      \// autoPlay: 3000, //Set AutoPlay to 3 seconds
+                      items : 4,
+                      itemsDesktop : [1199,3],
+                      itemsDesktopSmall : [979,2]
+                      });
+                      });
+                      </script>
+                      \!
+            .banner-home
+              .banner-images
+                .col-md-6.col-sm-6.banner-home1
+                  %a{:href => "#"}
+                    %img{:src => "images/banner2.jpg"}/
+                .col-md-6.col-sm-6.banner-home2
+                  %a{:href => "#"}
+                    %img{:src => "images/banner3.jpg"}/
+            .main-middle1
+              .title-sp
+                %h2 Sàn gỗ công nghiệp
+              .info-sp
+                .row-1
+                  %ul
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/007.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/007.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/007.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/007.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                .row-2
+                  %ul
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/007.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/007.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/007.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/007.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+            .banner-center
+              .banner-images
+                .col-md-6.col-sm-6.banner-home1
+                  %a{:href => "#"}
+                    %img{:src => "images/banner2.jpg"}/
+                .col-md-6.col-sm-6.banner-home2
+                  %a{:href => "#"}
+                    %img{:src => "images/banner3.jpg"}/
+            .main-middle2
+              .title-sp
+                %h2 Sàn gỗ nhập khẩu
+              .info-sp
+                .row-1
+                  %ul
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/060.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/060.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/060.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/060.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                .row-2
+                  %ul
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/060.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/060.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/060.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+                    %li.item
+                      .box-image
+                        %a{:href => "#"}
+                          %img{:src => "images/060.png"}/
+                      .box-info
+                        .item-title
+                          %a{:href => "#"} Đồ gỗ mỹ nghệ
+                        .item-price
+                          %span.price 250$
+                          %span.sales-price 280$
+    / BEGIN BRANDS
+    .brands
+      .container
+        .row
+          .brands-site
+            %ul.brands-item
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "ic-brands", :src => "images/ic-brands.png", :title => "ic-brands"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "ic-brands", :src => "images/ic-brands.png", :title => "ic-brands"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "ic-brands", :src => "images/ic-brands.png", :title => "ic-brands"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "ic-brands", :src => "images/ic-brands.png", :title => "ic-brands"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "ic-brands", :src => "images/ic-brands.png", :title => "ic-brands"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "ic-brands", :src => "images/ic-brands.png", :title => "ic-brands"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "ic-brands", :src => "images/ic-brands.png", :title => "ic-brands"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "ic-brands", :src => "images/ic-brands.png", :title => "ic-brands"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "ic-brands", :src => "images/ic-brands.png", :title => "ic-brands"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "ic-brands", :src => "images/ic-brands.png", :title => "ic-brands"}/
+          :javascript
+            $(document).ready(function(){
+              if (!!$.prototype.bxSlider)
+              slider = $('.brands-item').bxSlider({
+                useCSS: false,
+                maxSlides: 1,
+                //slideWidth: homeslider_width,
+                //infiniteLoop: homeslider_loop,
+                //hideControlOnEnd: true,
+                pager: false,
+                autoHover: true,
+                //auto: homeslider_loop,
+                //speed: parseInt(homeslider_speed),
+                //pause: homeslider_pause,
+                controls: true
+              });
+            });
+    / END BRANDS
+    / BEGIN PRE-FOOTER
+    .pre-footer
+      .container
+        .row
+          / BEGIN BOTTOM INFO BLOCK
+          .footer-middle
+            .col-md-3.col-sm-3.footer-ttw
+              %h2 Thông tin website
+              %ul
+                %li
+                  %a{:href => "#"} Đảm bảo sự hài lòng 100%
+                %li
+                  %a{:href => "#"} Đảm bảo sự hài lòng 100%
+                %li
+                  %a{:href => "#"} Đảm bảo sự hài lòng 100%
+                %li
+                  %a{:href => "#"} Đảm bảo sự hài lòng 100%
+                %li
+                  %a{:href => "#"} Đảm bảo sự hài lòng 100%
+                %li
+                  %a{:href => "#"} Đảm bảo sự hài lòng 100%s
+                %li
+                  %a{:href => "#"} Đảm bảo sự hài lòng 100%
+            .col-md-3.col-sm-3.footer-kh
+              %h2 Hỗ trợ khách hàng
+              %ul
+                %li
+                  %a{:href => "#"} Hướng dẫn mua hàng
+                %li
+                  %a{:href => "#"} Hướng dẫn mua hàng
+                %li
+                  %a{:href => "#"} Hướng dẫn mua hàng
+                %li
+                  %a{:href => "#"} Hướng dẫn mua hàng
+                %li
+                  %a{:href => "#"} Hướng dẫn mua hàng
+                %li
+                  %a{:href => "#"} Hướng dẫn mua hàng
+                %li
+                  %a{:href => "#"} Hướng dẫn mua hàng
+            .col-md-3.col-sm-3.footer-kn
+              %h2 Kết nối với chúng tôi
+              %ul
+                %li
+                  %i.fa.fa-facebook
+                  %a{:href => "#", :title => "Facebook"} Facebook
+                %li
+                  %i.fa.fa-twitter
+                  %a{:href => "#", :title => "Twitter"} Twitter
+                %li
+                  %i.fa.fa-google-plus
+                  %a{:href => "#", :title => "Google+"} Google+
+                %li
+                  %i.fa.fa-youtube-play
+                  %a{:href => "#", :title => "Youtube"} Youtube
+            .col-md-3.col-sm-3.footer-dc
+              %h2 Địa chỉ liên hệ
+              %ul
+                %li
+                  %span Công ty cổ phần nội thất Tiến Cường:
+                %li
+                  %span Hotline 1:
+                  %a{:href => "#"} 0988888888
+                %li
+                  %span Hotline 2:
+                  %a{:href => "#"} 0999999999
+                %li
+                  %span Email:
+                  %a{:href => "#"} noithatiencuong@gmail.com
+    .footer-copyright
+      .container
+        .row
+          .col-md-7.col-sm-8.copy-right
+            © 2015
+            %span Đồ gỗ mỹ nghệ 24H.
+            All rights reservers. Thiết kế website - xây dựng website bởi
+            %span Deverloper
+          .col-md-5.col-sm-4.status
+            Đang online:
+            %span 5
+            | Tổng truy cập:
+            %span 280$671
+    :javascript
+      $(document).ready(function() {
+        var owl1 = $("#owl-demo");
+        var owl2 = $("#owl-demo2");
+        var owl3 = $("#owl-demo3");
+        var owl4 = $("#owl-demo4");
+        $("#owl-demo").owlCarousel({                           
+            autoPlay: 3000, //Set AutoPlay to 3 seconds                           
+            items : 3,
+            itemsDesktop : [1199,3],
+            itemsDesktopSmall : [979,2]                           
+        });     
+          $(".next").click(function(){
+            owl1.trigger('owl.next');
+          });
+          $(".prev").click(function(){
+            owl1.trigger('owl.prev');
+          });
+          $(".next").click(function(){
+            owl2.trigger('owl.next');
+          });
+          $(".prev").click(function(){
+            owl2.trigger('owl.prev');
+          });
+          $(".next").click(function(){
+            owl3.trigger('owl.next');
+          });
+          $(".prev").click(function(){
+            owl3.trigger('owl.prev');
+          });
+          $(".next").click(function(){
+            owl4.trigger('owl.next');
+          });
+          $(".prev").click(function(){
+            owl4.trigger('owl.prev');
+          });
+      });

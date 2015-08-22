@@ -1,0 +1,56 @@
+.top {
+    height: 40px;
+    font-family: "Segoe UI";
+    color: #333333;
+    font-size: 13px;
+}
+.top li.dropdown:hover ul.dropdown-menu {
+    display: block;
+}
+li.dropdown a {
+    color: #666666;
+}
+li.dropdown a i.icon-arrow-down {
+    margin-top:10px;
+}
+
+div.top > div > div > div > ul > li.dropdown {
+    padding-left: 10px;
+    border-left: 1px solid #d8d8d8;
+    height: 40px;
+    line-height: 40px;
+    width: 117px;
+}
+div.top ul {
+    margin-bottom: 0px;
+}
+
+div.top ul > li > span > span {
+    color: #2363c3;
+}
+
+div.top div.row ul > li.dropdown > ul.dropdown-menu {
+    margin-top: 0px;
+    border-radius: 0px 0px 0px 0px;
+}
+
+.icon-arrow-down {
+    font-size: 8px;
+}
+
+
+.top ul li.dropdown:hover {
+    background-color: #3366cc;
+}
+
+.top ul li.dropdown:hover span {
+    color:#ffffff;
+}
+
+.top ul li.dropdown ul.dropdown-menu {
+    width: 117px !important;
+}
+
+.top ul li.dropdown ul.dropdown-menu li {
+    width: 117px;
+}

@@ -1,0 +1,31 @@
+@extends('layouts.admin')
+@section('main')
+@include('layouts._admin_header', array('title'=>"Danh sách sản phẩm nổi bật", 'url' => URL::route('new_high', array($type))))
+.content-box
+  .content-box-header
+    .clear
+  .content-box-content
+    #tab1.tab-content.default-tab
+      %table{:width => "100%"}
+        %thead
+          %tr
+            %th{:width => "2%"} STT
+            %th Ảnh
+            %th Tên sản phẩm
+            %th Danh mục
+            %th Xử lý
+        %tbody
+          - foreach ($products as $product)
+            %tr
+              %td
+                = $product->id
+              %td
+                %img{src: $product->photos->first()['img'], width: "150px"}
+              %td
+                = $product->name
+              %td
+                = $product->sub_category->name
+              %td
+                %a{href: URL::route('delete_high', array($product->id))}
+                  = " Xóa"
+@stop

@@ -1,0 +1,48 @@
+@extends('layouts.application')
+@section('title')
+= $product->name
+@stop
+@section('home')
+- $sub = $product->sub_category
+.boxmain
+  .box-title
+    %h2.titlemain
+      .path-acc
+        %h2
+          %a{:href => URL::route('index'), :title => "Trang chủ"} Trang chủ
+        %h2
+          %a{:href => URL::route('show_category', [$sub->id, $sub->make($sub->name)]), :title => $sub->name}
+            = $sub->name
+        %h2
+          %a{:href => URL::route('show', array($product->id, $product->title())), :title => $product->name}
+            = $product->name
+    %span.titlemain3
+  .box1
+    %div{:style => "position: relative;"}
+      %div{:style => "float: left; margin-right: 12px"}
+        #gallery_01
+          %a#example1{:href => $product->photos->first()['img'], :title => $product->name, :alt => $product->name}
+            %img{:alt => "San go Kinh Bac", :src => $product->photos->first()['img'], :style => "padding:4px; margin-right: 12px; min-width: 600px;", :width => "300"}/
+      %h1{:style => "font-size:18px; line-height: 30px; margin: 10px 0px; color: #B80101;"}
+        = $product->name
+      .price1{:style => "font-weight: bold; font-size: 14px; margin-bottom: 12px;"}
+        = "Bảo hành: ".$product->guarantee
+      %div{:style => "font-size: 20px; line-height: 30px;"}
+        Giá : Liên hệ
+      %div{:style => "font-size: 20px; line-height: 30px;color:red"}
+        Cam kết giá rẻ nhất Hà Nội
+      %div{:style => "width: 200px; padding-top: 15px; float: left;"}
+        .addthis_toolbox.addthis_default_style
+          %a.addthis_button_facebook.addthis_button_preferred_1.at300b{:href => "#", :title => "Facebook"}
+            %span.at4-icon-left.at4-icon.aticon-facebook{:style => "background-color: rgb(48, 88, 145);"}
+              %span.at_a11y Share on facebook
+        %script{:src => "//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-51412cd84e8e0d7f", :type => "text/javascript"}
+    .clear
+    %br/
+    %h3{style: "font-size:18px;font-weight:bold"}
+      = "Mô tả về sản phẩm ".$product->name
+    .list-wrap{:style => "padding: 12px;"}
+      #featured3.hide1
+        {!! $product->summary !!}
+
+@stop

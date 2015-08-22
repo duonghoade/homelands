@@ -1,0 +1,27 @@
+@extends('layouts.application')
+@section('title')
+= $sub->name
+@stop
+@section('home')
+- $products = $sub->products
+#content_main.col-lg-9.col-md-9.col-sm-12.col-xs-12
+  .boxmain
+    .box-title
+      %h1.titlemain
+        = $sub->name
+      %span.titlemain3
+    .box-sp
+      - foreach ($products as $pro)
+        .col-lg-3.col-md-3.col-sm-6.col-xs-12.bgproduct{style: "width:50%"}
+          .boximg
+            .box-img
+              %a{:href => URL::route('show', array($pro->id, $pro->title()))}
+                %img.img-thumbnail.bdimg{style: "width: 100%;height: 400px; object-fit: contain;", :alt => $pro->name, :src => $pro->photos->first()['img'], height: "265px", :title => $pro->name}/
+            .proName
+              %a{:href => URL::route('show', array($pro->id, $pro->title())), :title => $pro->name}
+                %h2
+                  = $pro->name
+            .price_detail
+              %a{:href => URL::route('show', array($pro->id, $pro->title())), :title => $pro->name}
+                = "Liên Hệ: 0988 094 485"
+@stop

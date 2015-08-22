@@ -1,0 +1,63 @@
+@extends('layouts.admin')
+@section('main')
+%form#HangAddForm{"accept-charset" => "utf-8", :action => URL::route('update_product', array($product->id)), :enctype => "multipart/form-data", :method => "post", :name => "image"}
+  @include('layouts._admin_header_submit', array('title' => "Sửa sản phẩm"))
+  %input#get_subcategory_url{type: "hidden", value: URL::route('get_subcategory')}
+  .content-box
+    .content-box-header
+      %h3 Thêm mới sản phẩm
+      .clear
+    .content-box-content
+      #tab1.tab-content.default-tab
+        %table.input
+          %tr
+            %td.label{:width => "120"} Chọn danh mục cha:
+            %td
+              %select{name: 'category', id: "category"}
+                - foreach ($categories as $category)
+                  %option{value: $category->id}
+                    = $category->name
+          %tr
+            %td.label{:width => "120"} Chọn danh mục con:
+            %td
+              %select#subcategory{name: 'subcategory_id'}
+                %option{value: $sub->id}
+                  = $sub->name
+          %tr
+            %td.label{:width => "120"} Tên sản phẩm:
+            %td
+              %input.text-input.medium-input{:name => "name", :type => "text", value: $product->name}/
+          %tr
+            %td.label{:width => "120"} Kích thước:
+            %td
+              %input.text-input.medium-input{:name => "thick", :type => "text", value: $product->thick}/
+          %tr
+            %td.label{:width => "120"} Giá:
+            %td
+              %input.text-input.medium-input{:name => "price", :type => "text", value: $product->price}/
+          %tr
+            %td.label{:width => "120"} Bảo hành:
+            %td
+              %input.text-input.medium-input{:name => "guarantee", :type => "text", value: $product->guarantee}/
+          %tr
+            %td.label{:width => "120"} Ảnh:
+            %td
+              %img{src: $product->photos->first()['img'], width: "150px"}
+          %tr
+            %td.label{:width => "120"} Chọn ảnh mới:
+            %td
+              %input{:name => "img", :type => "file", :required => true}/
+          %tr
+            %td.label{:width => "120"} Mô tả:
+            %td
+              %textarea{name: 'summary'}
+                = $product->summary
+              :javascript
+                CKEDITOR.replace( 'summary',
+                {
+                  height: 700
+                });
+        .clear
+      #tab2.tab-content
+        .clear
+@stop

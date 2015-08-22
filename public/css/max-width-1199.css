@@ -1,0 +1,388 @@
+/* start max-width 1199 */
+@media (max-width: 1199px) {
+
+	#container-search #left-txt {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+		border-right: 0;
+		border-bottom: 1px solid #ddd;
+	}
+	#container-search #left-txt h2, #container-search #left-txt span{
+		width: 100%;
+	}
+	#container-search #tab-search {
+		width: 100%;
+	}
+	#container-search #component-search {
+		width: 100%;
+		height: auto;
+	}
+	#main-destinations #container-icon-des a {
+		width: 20%;
+		text-align: center;
+	}
+	#main-destinations #container-icon-des a span {
+		margin: 0 auto;
+		float: none;
+		display: inline-block;
+	}
+	#main-destinations #container-icon-des a h2 {
+		width: 100%;
+		float: none;
+	}
+	#content-destinations #map a img {
+		width: 100%;
+	}
+	#txt-des p {
+	    width: 100%;
+	}
+	#txt-des #img-des {
+	    width: 100%;
+	}
+	#txt-des #img-des #box-img {
+	    margin: 0 0 20px;
+	    width: 50%;
+	    padding-right: 20px;
+	}
+	#main-support #container-sp #box-support {
+		width: 33.33%;
+		padding: 0 10px;
+		margin: 0 auto;
+	}
+	#main-support #container-sp #box-support img {
+		margin: 0 auto;
+		float: none;
+	}
+	#main-support #container-sp #box-support h2 {
+		float: none;
+		width: 100%;
+	}
+	#main-support #container-sp #box-support font {
+		float: none;
+		width: 100%;
+	}
+	#main-support #container-sp #box-support p {
+		width: 100%;
+		float: none;
+		margin: 5px auto;
+	}
+	#scroll-tours #box-tour #img-tour #title-tour h2 {
+		width: 100%;
+	}
+	#scroll-tours #box-tour #txt-tour {
+		width: 100%;
+	}
+	#scroll-tours #box-tour #txt-tour #price-tour,
+	#scroll-tours #box-tour #txt-tour p {
+		width: 100%;
+	}
+	#scroll-tours #box-tour #txt-tour span.i-nav {
+		left: 50%;
+		margin-left: -10px;
+	}
+	#box-input input.des-date {
+	    width: 100%;
+	}
+	#box-input input.duration-cruise {
+	    width: 100%;
+	}
+	/*---------------- About Us ------------------------*/
+	#component-bre-page {
+	    margin-right: 0;
+	}
+	#right-expert {
+	    float: right;
+	    margin: 0;
+	    width: 50%;
+	}
+	#tab-about ul li {
+		margin: 0;
+		padding-right: 20px;
+	}
+	#tab-about ul li a {
+		padding: 0
+	}
+	#box-about a {
+		display: inline-block;
+		width: 45%;
+		float: left;
+	}
+	#box-about a img {
+		width: 100%;
+	}
+	#box-about #item-txt {
+		width: 55%;
+		margin: 0;
+		padding: 15px 25px;
+	}
+	#box-about #item-txt h2, #box-about #item-txt p {
+		width: 100%;
+	}
+	/*-------- contact us ----------------*/
+	#ft-contact {
+		width: 31.33%;
+		margin-right: 3%;
+	}
+	#ft-contact font {
+		width: 70%;
+		margin: 0 !important;
+		padding: 5px 10px 5px;
+	}
+	#ft-contact h2 {
+		width: 70%;
+		margin: 0 !important;
+		padding: 5px 10px 5px;
+	}
+	#form-contact {
+		float: none;
+		margin: 30px auto 0;
+	}
+	#form-contact textarea.message {
+		width: 100%;
+	}
+	/*------------------- cruise detail ---------------------------*/
+	#title-top-tour #left-nametour {
+		width: 70%;
+	}
+	#info-dt-tour #r-detail-tour {
+		width: 52%;
+		margin-right: 3%;
+		margin-bottom: 3%;
+	}
+	#info-dt-tour #box-right-dt {
+		width: 45%;
+		margin: 0;
+		overflow: hidden;
+	}
+	#info-dt-tour #r-detail-tour #photos-tour {
+		width: 100%;
+	}
+	.ad-gallery {
+		width: 100%;
+	}
+	#component-detail #cabin-info a  {
+		width: 50%;
+		margin-right: 3%;
+		display: inline-block;
+		float: left;
+	}
+	#component-detail #cabin-info a img {
+		width: 100%;
+		height: auto;
+	}
+	#component-detail #cabin-info #item-cabin {
+		width: 47%;
+	}
+	#component-detail .btn-cruise {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		margin: 30px 0;
+	}
+	#component-detail a.bt-tailormadetour, 
+	#component-detail a.bt-enquiry {
+		display: inline-block;
+		margin: 10px 10px;
+		float: none;
+	}
+	/* ------------- cruise - detail 2 --------------- */
+	#component-detail #cabin-highlight {
+		width: 31.33%;
+		margin-right: 3%;
+	}
+	#component-detail #cabin-highlight img,
+	#component-detail #cabin-highlight h2,
+	#component-detail #cabin-highlight p {
+		width: 100%;
+	}
+	#component-detail #deckplans a img {
+		width: 100%;
+	}
+	#list-itinerary #offers {
+		display: none;
+	}
+	#container-iti-cruise #map-iti {
+		margin: 20px auto;
+		width: 100%;
+		display: inline-block;
+	}
+	#container-iti-cruise #map-iti img { 
+		width: 100%;
+	}
+	#container-iti-cruise #full-iti tr td.day {
+		width: 10%
+	}
+	#container-iti-cruise #full-iti tr td.dest {
+		width: 45%;
+	}
+	#container-iti-cruise #full-iti tr td.summary {
+		width: 45%;
+	}
+	#container-iti-cruise #sub-inclusions {
+		width: 48%;
+		margin-right: 2%;
+	}
+	#component-detail #box-danhgia a img {
+		width: 100%;
+	}
+	#component-detail #list-review #l-img {
+		width: 15%;
+		margin-right: 3%;
+	}
+	#component-detail #list-review #r-review {
+		width: 82%;
+	}
+	#best-cruise #img-cruise {
+		width: 33%;
+		margin-right: 2%;
+	}
+	#best-cruise #img-cruise img, 
+	#best-cruise #img-cruise #namecruise {
+		width: 100%;
+	}
+	#best-cruise #right-cruise {
+		width: 65%;
+	}
+	#best-cruise #right-cruise #top-cruise, 
+	#best-cruise #right-cruise #txt-highlights,
+	#best-cruise #right-cruise #bot-tour {
+		width: 100%;
+	}
+	#best-cruise #right-cruise #txt-highlights p {
+		width: 73%;
+	}
+	#best-cruise #right-cruise #txt-highlights #viewmap {
+		width: 25%;
+		margin-left: 2%;
+	}
+	#best-cruise #right-cruise #top-cruise h2 {
+		width: 80%;
+	}
+	#main-cr-link #cr-links {
+		width: 31.33%;
+		margin-right: 3%;
+	}
+	#main-cr-link #cr-links img,
+	#main-cr-link #cr-links h2 {
+		width: 100%;
+	}
+	#main-box-link #cat-links {
+		width: 31.33%;
+		margin-right: 3%;
+	}
+	#main-box-link #cat-links img ,
+	#main-box-link #cat-links h2 {
+		width: 100%;
+	}
+	#main-also-des #des {
+		width: 19%;
+		margin-right: 1%;
+	}
+	#main-also-des #des img,
+	#main-also-des #des a {
+		width: 100%;
+	}
+	#box-info-destination #img-des {
+		width: 100%;
+		margin-left: 0;
+	}
+	#box-info-destination #quickfast {
+		width: 100%;
+	}
+	#fac-pol-hotel #li-txt h4 {
+		width: 25%;
+		margin-right: 2%
+	}
+	#fac-pol-hotel #li-txt p {
+		width: 73%;
+	}
+	#best-tour2 #img-tour,
+	#best-hotel #img-hotel {
+		width: 33%;
+		margin-right: 2%;
+	}
+	#best-tour2 #right-tour,
+	#best-hotel #right-hotel {
+		width: 65%;
+	}
+	#best-tour2 #img-tour img,
+	#best-tour2 #img-tour #viewmap,
+	#best-hotel #img-hotel #viewmap,
+	#best-hotel #img-hotel img {
+		width: 100%;
+	}
+	#best-tour2 #img-tour #viewmap a,
+	#best-hotel #img-hotel #viewmap a {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+	}
+	#best-tour2 #img-tour #viewmap a span.i-map,
+	#best-hotel #img-hotel #viewmap a span.i-map {
+		display: inline-block;
+		margin: 0 5px;
+		float: none;
+	}
+	#best-tour2 #right-tour #top-t,
+	#best-tour2 #right-tour #top-t #left-nametour,
+	#best-tour2 #right-tour #top-t #right-styletour,
+	#best-tour2 #right-tour #txt-highlights,
+	#best-tour2 #right-tour #bot-tour {
+		width: 100%;
+	}
+	#tab-scroll .demo-backward {
+		left: 0;
+	}
+	#tab-scroll .demo-forward {
+		right: 0;
+	}
+	#day-tour #info-day ul {
+		width: 70%;
+	}
+	#day-tour #info-day img {
+		width: 30%;
+	}
+	#hotel_in_tour h3 {
+		position: static;
+	}
+	#box-inclusions {
+		width: 46%;
+		margin: 15px 2%;
+	}
+	#filter ul {
+		width: 45%;
+	}
+	#filter span.line {
+		margin: 0 4%
+	}
+	#l-dt-travelguide {
+		width: 73%;
+		margin-right: 2%;
+	}
+	#r-dt-travelguide {
+		width: 25%;
+	}
+	#l-dt-travelguide #list-travelguide img {
+		width: 28%;
+		margin-right: 2%;
+	}
+	#l-dt-travelguide #list-travelguide #txt-guide {
+		width: 70%;
+	}
+	#r-dt-travelguide a img {
+		max-width: 100%;
+	}
+	#l-dt-travelguide #box-helpful-guide ul {
+		width: 100%;
+	}
+	#l-dt-travelguide #box-helpful-guide ul li {
+		margin: 0;
+		width: 50%;
+	}
+	#l-dt-travelguide #box-other-guide #b-also-guide img {
+		width: 22%;
+		margin-right: 2%;
+	}
+}
+/* end max-width 1199 */

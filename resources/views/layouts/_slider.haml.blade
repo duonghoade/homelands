@@ -1,0 +1,16 @@
+%div
+  %link{:href => "/css/nivo-slider.css", :rel => "stylesheet", :type => "text/css"}/
+  .slider-wrapper.theme-default{style: "margin-bottom: 10px;box-shadow: 1px 2px 2px;"}
+    #slider.nivoSlider
+      %a{:href => ""}
+        %img.img-responsive{:alt => "", "data-thumb" => "/images/1.jpg", :src => "/images/1.jpg"}/
+      %a{:href => ""}
+        %img.img-responsive{:alt => "", "data-thumb" => "/images/2.jpg", :src => "/images/2.jpg"}/
+      %a{:href => ""}
+        %img.img-responsive{:alt => "", "data-thumb" => "/images/3.jpg", :src => "/images/3.jpg"}/
+  %script{:src => "/js/jquery.nivo.slider.js", :type => "text/javascript"}
+  :javascript
+    $(window).load(function () {
+        $('#slider').nivoSlider({
+        });
+    });

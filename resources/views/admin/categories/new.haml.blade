@@ -1,0 +1,32 @@
+@extends('layouts.admin')
+@section('main')
+%form#HangAddForm{"accept-charset" => "utf-8", :action => URL::route('create_category'), :enctype => "multipart/form-data", :method => "post", :name => "image"}
+  @include('layouts._admin_header_submit', array('title' => "Thêm danh mục sản phẩm"))
+  .content-box
+    .content-box-header
+      %h3 Thêm mới sản phẩm
+      .clear
+    .content-box-content
+      #tab1.tab-content.default-tab
+        %table.input
+          %tr
+            %td.label{:width => "120"} Chọn danh mục cha:
+            %td
+              %select{name: 'category_id'}
+                - foreach ($categories as $category)
+                  %option{value: $category->id}
+                    = $category->name
+          %tr
+            %td.label{:width => "120"} Tên danh mục con:
+            %td
+              %input.text-input.medium-input{:name => "name", :type => "text"}/
+          %tr
+            %td.label{:width => "120"} Bài viết mô tả:
+            %td
+              %textarea{name: 'summary'}
+              :javascript
+                CKEDITOR.replace( 'summary' );
+        .clear
+      #tab2.tab-content
+        .clear
+@stop

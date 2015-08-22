@@ -1,0 +1,18 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title Administractor
+    %link{:href => '/admin.css', :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "https://struts2-jquery.googlecode.com/svn-history/r1844/trunk/struts2-jquery-plugin/src/main/resources/template/js/base/jquery-1.10.2.min.js", :type => "text/javascript"}
+    %script{:src => "/admin/admin.js"}
+  %body
+    %p
+      %script{:src => "//cdn.ckeditor.com/4.4.7/full/ckeditor.js"}
+    #body-wrapper
+      @include('layouts._admin_sidebar')
+      #main-content
+        @yield('main')
+        #footer
+          %small
+            \© Copyright 2012

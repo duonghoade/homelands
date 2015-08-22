@@ -1,0 +1,190 @@
+ *,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+} 
+
+/*#main-head *,#main-head *:before,#main-head *:after,
+#main-search *, #main-search *:before, #main-search *:after,
+#main-destinations *, #main-destinations *:before, #main-destinations *:after,
+#main-besttours *, #main-besttours *:before, #main-besttours *:after,
+#main-support *, #main-support *:before, #main-support *:after,
+#main-tailormade *, #main-tailormade *:before, #main-tailormade *:after,
+#main-bottom *, #main-bottom *:before, #main-bottom *:after,
+#footer *, #footer *:before, #footer *:after {
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  -ms-box-sizing: border-box;
+	  -o-box-sizing: border-box;
+	  box-sizing: border-box;
+}*/
+
+#main-head #top-head .group-left-head {
+    float: left;
+    width: 79%;
+}
+
+#main-head #top-head #search-top {
+	width: 21%;
+}
+/*----------------------------------*/
+.flex-direction-nav a::before {
+	content: "";
+}
+.flex-nav-prev a::before  {
+	content: "";
+}
+.flex-direction-nav a.flex-prev {
+	background: url("../images/sprite.png") no-repeat scroll -305px 0 rgba(0, 0, 0, 0);
+}
+.flex-direction-nav a.flex-next {
+	background: url("../images/sprite.png") no-repeat scroll -335px 0 rgba(0, 0, 0, 0);
+}
+.flex-direction-nav a {
+	width: 23px;
+	font-size: 0;
+}
+#testimonials-team #testimonial h2 {
+    padding-bottom: 15px;
+}
+#testimonials-team #testimonial h2::before {
+    border-bottom: 1px solid #619438;
+    bottom: 0;
+    content: "";
+    left: 0;
+    margin: 0 auto;
+    max-width: 170px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+#owl-demo .item, #owl-demo2 .item{
+	margin: 0 20px;
+}
+#owl-demo .item img, #owl-demo2 .item img,
+#owl-demo3 .item img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+#owl-demo3 .item {
+	margin: 0 10px;
+} 
+#owl-demo4 .item {
+	margin: 0 20px;
+} 
+#scroll-tours, #scroll-delta-tour, #scroll-team , #scroll-guide{
+	position: relative;
+}
+.customNavigation .btn {
+	position: absolute;
+	top: 50%;
+	width: 23px;
+	height: 40px;
+	font-size: 0;
+	padding: 5px;
+	cursor: pointer;
+	margin-top: -20px;
+}
+.customNavigation .btn.prev  {
+	left: -3px;
+	background: url("../images/sprite.png") no-repeat scroll -305px 0 rgba(0, 0, 0, .3);
+}
+.customNavigation .btn.prev:hover {
+	background: url("../images/sprite.png") no-repeat scroll -305px 0 rgba(0, 0, 0, .9);
+}
+.customNavigation .btn.next  {
+	right: -4px;
+	background: url("../images/sprite.png") no-repeat scroll -335px 0 rgba(0, 0, 0, 0.3);
+}
+.customNavigation .btn.next:hover {
+	background: url("../images/sprite.png") no-repeat scroll -335px 0 rgba(0, 0, 0, 0.9);
+}
+#scroll-delta-tour .customNavigation .btn {
+	margin-top: -50px;
+}
+#scroll-delta-tour .customNavigation .btn.prev {
+	left: 10px;
+}
+#scroll-delta-tour .customNavigation .btn.next {
+	right: 9px;
+}
+#scroll-team .customNavigation .btn.prev  {
+	left: -3px;
+	background: url(../images/sprite.png) -300px -300px no-repeat;
+}
+#scroll-team .customNavigation .btn.next  {
+	right: -4px;
+	background: url(../images/sprite.png) -320px -300px no-repeat;
+}
+#scroll-team .customNavigation .btn {
+	width: 10px;
+	height: 18px;
+}
+.check-contact {
+	float: left;
+}
+#form-contact #button-contact a.bt-message {
+	margin-top: -43px;
+}
+#title-catdes h2 {
+	position: relative;
+}
+#title-catdes h2:after {
+	border-bottom: 1px solid #69bd43;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 200px;
+}
+#box-img-detail  {
+	position: relative;
+}
+#box-img-detail .owl-carousel .owl-controls {
+	display: none !important;
+}
+#box-img-detail .owl-carousel  .owl-wrapper-outer .owl-wrapper .owl-item .item #b-img {
+	position: relative;
+}
+#box-img-detail .owl-carousel  .owl-wrapper-outer .owl-wrapper .owl-item .item #b-img #title-img {
+	background-color: rgba(0, 0, 0, 0.5);
+    border: 0 none;
+    bottom: 5px;
+    height: 60px;
+    line-height: 60px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+#box-img-detail .owl-carousel  .owl-wrapper-outer .owl-wrapper .owl-item .item #b-img #title-img a {
+	color: #fff;
+	font-size: 20px;
+	text-transform: capitalize;
+}
+#box-img-detail .owl-carousel  .owl-wrapper-outer .owl-wrapper .owl-item .item img {
+	width: 100%;
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+	
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+	
+}
+@media (min-width: 320px) and (max-width: 479px){
+	
+}
+

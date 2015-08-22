@@ -1,0 +1,62 @@
+@extends('layouts.application')
+@section('title')
+Liên hệ
+@stop
+@section('home')
+.boxmain
+  .box-title
+    %h2.titlemain Liên hệ
+    %span.titlemain3
+  .paddall.box1
+    %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+      %tbody
+        %tr
+          %td
+            %form#contactIndexForm.form_contact{:action => URL::route('create_contact'), :method => "post", :name => "contactForm", :onsubmit => "return validateForm();"}
+              %table{:border => "0", :cellpadding => "4", :cellspacing => "0", :style => "border: none !important;", :width => "100%"}
+                %tbody
+                  %tr
+                    %td{:height => "30", :width => "150"}
+                      %span.field
+                        %label.styled{:for => "Họ tên"} Họ tên
+                    %td
+                      %span.thefield
+                        %input{type: "hidden", name: "_token", value: csrf_token()}
+                        %input#name2{:class => "validate[required]", :name => "name", :size => "40", :type => "text"}/
+                  %tr
+                    %td{:height => "30"}
+                      %span.field
+                        %label.styled{:for => "Email2"} Email
+                    %td
+                      %span.thefield
+                        %input#name4{:class => "validate[required]", :name => "email", :size => "40", :type => "text"}/
+                  %tr
+                    %td{:height => "30"}
+                      %span.field
+                        %label.styled{:for => "Điện thoại2"} Số điện thoại
+                    %td
+                      %span.thefield
+                        %input#name{:class => "validate[required]", :name => "phone", :size => "40", :type => "text"}/
+                  %tr
+                    %td
+                      %span.field
+                        %label.styled{:for => "Nội dung2"} Nội dung
+                    %td
+                      %span.thefield
+                        %textarea{:cols => "85", :name => "content", :rows => "8"}
+                  %tr
+                    %td  
+                    %td
+                      %button.btnSend{:name => "save", :type => "submit", :value => "Gửi"}
+                        Gửi
+  %table
+    %tbody
+      %tr
+        %td{width: "100px",:style => "font-size:15px;font-weight:bold"} Địa chỉ
+        %td{width: "100px",:style => "font-size:15px;font-weight:bold"}
+          Phòng 1207 - Tòa nhà B6A, khu đô thị Nam Trung Yên, phường Trung Hòa, Quận Cầu Giấy, Hà Nội
+      %tr
+        %td Bản đồ
+        %td
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1565.9414881262833!2d105.78948599850253!3d21.01437193127488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab563a0ee141%3A0xf7043b16233b79b3!2zS2h1IMSRw7QgdGjhu4sgTmFtIFRydW5nIFnDqm4sIFRydW5nIEhvw6AsIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1439720609188", :style => "border:0", :width => "600"}
+@stop

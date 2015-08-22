@@ -1,0 +1,333 @@
+/* start max-width 991 */
+@media (max-width: 991px) {
+	#main-head #top-head {
+		height: auto;
+	}
+	#main-head #top-head .group-left-head {
+	    width: 100%;
+	}
+	#main-head #top-head #title-top {
+		float: left;
+		width: 60%;
+	}
+	#main-head #top-head #top-link {
+		width: 40%;
+		margin-right: 0;
+	}
+	#main-head #top-head #search-top {
+		width: 100%;
+	}
+	#main-head #top-head #search-top input.search {
+		width: 90%;
+	}
+	#main-head #top-head #search-top a.i-search {
+		width: 16px;
+		float: right;
+	}
+	/*----------------- bot head -------------------*/
+	#main-head #bot-head #logo {
+		width: 50%;
+		float: left;
+	}
+	#main-head #bot-head #menu {
+		position: relative;
+		z-index: 11;
+		width: 50%;
+		float: right;
+	}
+	#main-head #bot-head #menu .main-menu {
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-0-transition: all 0.5s;
+		transition: all 0.5s;
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+		-ms-transform: scale(0);
+		-o-transform: scale(0);
+		transform: scale(0);
+		-webkit-transform-origin: right top;
+		-moz-transform-origin: right top;
+		-ms-transform-origin: right top;
+		-0-transform-origin: right top;
+		transform-origin: right top;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		min-width: 300px;
+		background-color: #6b9e42;
+		width: 100%;
+	}
+	#main-head #bot-head #menu .main-menu.open {
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-0-transition: all 0.5s;
+		transition: all 0.5s;
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+		-webkit-transform-origin: right top;
+		-moz-transform-origin: right top;
+		-ms-transform-origin: right top;
+		-0-transform-origin: right top;
+		transform-origin: right top;
+	}
+	#main-head #bot-head #menu .main-menu li {
+		width: 100%;
+		float: left;
+	}
+	#main-head #bot-head #menu .main-menu li a {
+		width: 100%;
+		height: 55px;
+		line-height: 55px;
+	}
+	#main-head #bot-head #menu .main-menu li a br{
+		display: none;
+	}
+	#main-head #bot-head #menu ul li a span.ic-page {
+		left: 0;
+		top: 12px;
+		margin-left: 15px;
+	}
+	#main-head #bot-head #menu ul li a font {
+		margin: 0;
+		text-align: left;
+		padding-left: 45px;
+	}
+	
+	#main-head #bot-head #menu .icon-menu {
+		position: relative;
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		top: 20px;
+		border: 1px solid #fff;
+		float: right;
+	}
+	#main-head #bot-head #menu .icon-menu .ico {
+		position: absolute;
+		width: 40px;
+		height: 4px;
+		background-color: #fff;
+		content: "";
+		display: inline-block;
+		left: 4px;
+		margin-top: 9px;
+	}
+
+	#main-head #bot-head #menu .icon-menu .icon1 {
+		top: 0;
+	}
+	#main-head #bot-head #menu .icon-menu .icon2 {
+		top: 13px;
+	}
+	#main-head #bot-head #menu .icon-menu .icon3 {
+		top: 26px;
+	}
+	/*---------------- banner ----------------------*/
+	#main-banner #slide-home .slider .prev .arrow {
+		background: url("../images/sprite.png") no-repeat scroll -305px 0 rgba(0, 0, 0, 0);
+	}
+	#main-banner #slide-home .slider .next .arrow {
+		background: url("../images/sprite.png") no-repeat scroll -335px 0 rgba(0, 0, 0, 0);
+	}
+	/*-------------- content ------------------------*/
+	#component-search #box-input {
+		width: 48%;
+		margin-right: 2%;
+		margin-bottom: 10px;
+	}
+	#component-search #box-input:nth-child(even) {
+		margin-right: 0;
+		float: right;
+	}
+
+	#map {
+		display: none;
+	}
+	#txt-des {
+		width: 100%;
+	}
+	#help-contact {
+		text-align: center;
+	}
+	#help-contact a {
+		display: inline-block;
+	}
+	#help-contact a img {
+		margin: 0;
+	}
+	#help-contact #txt-help {
+		max-width: 100%;
+		float: none;
+	}
+	#help-contact #txt-help h2, #help-contact #txt-help p{
+		width: 100%;
+	}
+	#help-contact a.bt-help {
+		float: none;
+	}
+	#footer #f-box {
+		width: 45%;
+		margin-bottom: 10px
+	}
+	#footer #f-box:nth-child(even) {
+		float: right;
+	}
+	.credits ul li a img {
+		width: 100%;
+	}
+	#help-contact #txt-help {
+		width: 100%;
+	}
+
+	/* ------------- about ------------------ */
+	#tab-about {
+		height: auto;
+	}
+	#tab-about ul li a { 
+		height: 29px;
+	}
+	#box-about a {
+		width: 50%;
+	}
+	#box-about a img {
+		height: auto;
+	}
+	#box-about #item-txt {
+		width: 50%;
+	}
+	#box-advantages #txt-ad {
+		width: 90%;
+	}
+	/* ------------------- Contact us ------------------- */
+	#ft-contact {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+	#ft-contact font {
+		width: 70%;
+		margin: 0 !important;
+		padding: 5px 10px 5px;
+	}
+	#ft-contact h2 {
+		width: 70%;
+		margin: 0 !important;
+		padding: 5px 10px 5px;
+	}
+	#form-contact {
+		width: 100%;
+		display: inline-block;
+	}
+	#form-contact #b-input {
+		width: 100%;
+		margin-right: 0;
+	}
+	#form-contact label.fullname {
+		display: inline-block;
+		width: 100%;
+	}
+	/*------------------- cruise detail ---------------------------*/
+	#title-top-tour #left-nametour {
+		width: 100%;
+	}
+	#title-top-tour #price-pk {
+		width: 100%;
+		float: left;
+		text-align: left;
+		margin-top: 10px;
+		height: auto;
+	}
+	#title-top-tour #price-pk h3,
+	#title-top-tour #price-pk span.off,
+	#title-top-tour #price-pk strong,
+	#title-top-tour #price-pk font {
+		float: left;
+	}
+	#title-top-tour #price-pk h3 {
+		font-size: 16px;
+		line-height: 22px;
+	}
+	#title-top-tour #price-pk span.off {
+		font-size: 22px;
+		line-height: 22px;
+		height: auto;
+	}
+	#title-top-tour #left-nametour h2 {
+		width: 100%;
+	}
+	#title-top-tour #left-nametour #tc-cruise {
+		width: 100%;
+	}
+	#info-dt-tour #box-right-dt #grade-cruise,
+	#info-dt-tour #box-right-dt #best-offer,
+	#info-dt-tour #box-right-dt #box-check {
+		width: 100%;
+	}
+	#info-dt-tour #box-right-dt #box-check #b-duration,
+	#info-dt-tour #box-right-dt #box-check #b-duration,
+	#info-dt-tour #box-right-dt #box-check #input-sl,
+	#info-dt-tour #box-right-dt #box-check #input-sl input.duration {
+		width: 100%;
+	}
+	#component-detail #cabin-info #item-cabin #tc-cabin ul li {
+		float: none;
+		width: 100%;
+	}
+	#component-detail #tab-info-detail {
+		display: inline-block;
+		height: auto;
+		margin: 0 auto;
+	}
+	#component-detail #tab-info-detail ul {
+		height: auto;
+	}
+	#list-itinerary #day {
+		width: 12%;
+	}
+	#list-itinerary #iti-center {
+		width: 76%;
+		margin: 0;
+		padding: 10px;
+	}
+	#list-itinerary #nav-detail {
+		width: 12%;
+	}
+	#container-iti-cruise #tab-day {
+		height: auto;
+	}
+	#des-ct {
+	    background: none repeat scroll 0 0 #f6f5f3;
+	    float: left;
+	    margin: 0 1% 20px;
+	    width: 31.33%;
+	}
+	#info-dt-tour #box-right-dt {
+		min-height: auto;
+	}
+	#info-dt-tour #box-right-dt #map-hotel {
+		height: auto;
+	}
+	#best-tour2 #right-tour #top-t #right-styletour a {
+		float: left;
+	}
+	#best-tour2 #right-tour #top-t #left-nametour {
+		margin-bottom: 10px;
+	}
+	#box2-input {
+		width: 48%;
+		margin: 10px 1%;
+	}
+	#box-travelguide {
+		width: 31.33%;
+		margin: 0 1% 20px;
+	}
+	#l-dt-travelguide #box-helpful-guide ul li {
+		margin: 0;
+		width: 100%;
+	}
+} /*end max-width 991 */

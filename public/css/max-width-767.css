@@ -1,0 +1,305 @@
+/* start max-width 767 */
+@media (max-width: 767px) {
+	#main-head #top-head #title-top {
+	    width: 100%;
+	}
+	#main-head #top-head #top-link {
+	    width: 100%;
+	}
+	#main-head #top-head #top-link ul {
+	    float: left;
+	}
+	#main-destinations #container-icon-des a {
+	    width: 50%;
+	    margin-bottom: 20px;
+	}
+	#main-destinations #content-destinations {
+		padding: 30px 15px;
+	}
+	#txt-des #img-des #box-img {
+	    padding: 0 15px;
+	    height: auto;
+	}
+	#txt-des #img-des #box-img img {
+		width: 100%;
+		height: auto;
+	}
+	#txt-des h2 {
+		font-size: 18px;
+		height: 30px;
+		margin: 0 0 10px;
+	}
+	#main-support #container-sp #box-support {
+	    margin: 0 auto 10px;
+	    width: 100%;
+	}
+	#main-tailormade #content-step {
+		padding: 10px;
+	}
+	#main-tailormade #step-des #destination {
+		width: 48%;
+	}
+	.credits ul li {
+		width: 50%;
+	}
+	.credits ul li a img {
+	    height: 150px;
+	    width: 150px;
+	}
+	#bottom-ft #bot-ft {
+		text-align: center;
+		line-height: normal;
+		height: auto;
+	}
+	#bottom-ft #bot-ft #link-ft {
+	    float: none;
+	    width: 100%;
+	    height: auto;
+	    line-height: 30px;
+	}
+	#bottom-ft #bot-ft p {
+	    float: none;
+	    width: 100%;
+	    height: auto;
+	    line-height: 30px;
+	}
+	#bottom-ft #bot-ft #socials {
+	    float: none;
+	    width: auto;
+	    display: inline-block;
+	}
+	.grid-1 {
+	    padding: 0 10px;
+	}
+	#owl-demo4 .item {
+	    margin: 0 10px;
+	}
+	#title-line h2 {
+		font-size: 22px;
+		letter-spacing: 1px !important;
+	}
+	/*---------------------- About ---------------------------*/
+	#component-bre-page {
+	    width: 100%;
+	    margin-bottom: 15px
+	}
+	#right-expert {
+	    width: 100%;
+	}
+	#box-about a {
+	    width: 100%;
+	}
+	#box-about #item-txt {
+	    width: 100%;
+	    padding: 15px 10px;
+	}
+	#box-advantages #txt-ad {
+		width: 100%;
+	}
+	.check-contact {
+		float: left;
+		width: 100%;
+	}
+	#form-contact #button-contact {
+		margin-bottom: 0;
+	}
+	#form-contact #button-contact input.checkbox {
+		margin: -7px 15px 0 0;
+	}
+	#form-contact #button-contact span.txt {
+		float: none;
+		margin: 0;
+	}
+	#form-contact #button-contact a.bt-message {
+		float: left;
+		margin-top: 15px;
+	}
+	#info-dt-tour #r-detail-tour {
+		width: 100%;
+		margin-right: 0;
+	}
+	#info-dt-tour #box-right-dt {
+		width: 100%;
+	}
+	#component-detail #cabin-info a {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	#component-detail #cabin-info #item-cabin {
+		width: 100%;
+	}
+	#info-dt-tour #box-right-dt a.bt-inquiry {
+		width: 100%;
+		margin: 0;
+	}
+	#info-dt-tour #box-right-dt h4 {
+		width: 100%;
+	}
+	#component-detail #cabin-highlight {
+		width: 100%;
+		margin-right: 0;
+	}
+	#component-detail #cabin-highlight img {
+		height: auto;
+	}
+	#list-itinerary #iti-center h3 {
+		font-size: 13px;
+		margin-top: 0;
+	}
+	#list-itinerary #nav-detail {
+		line-height: 80px;
+		text-align: center;
+	}
+	#list-itinerary #nav-detail span {
+		float: none;
+		margin: 0;
+		display: inline-block;
+	}
+	#list-itinerary #day font {
+		width: 100%;
+	}
+	#container-iti-cruise #li-detail-day h2 {
+		height: auto;
+	}
+	#container-iti-cruise #li-detail-day #txt-detail #img-day {
+		width: 100%;
+	}
+	#container-iti-cruise #li-detail-day #txt-detail #img-day img {
+		width: 100%;
+	}
+	#container-iti-cruise #sub-inclusions {
+		width: 100%;
+		margin-right: 0;
+		border-right: 0;
+	}
+	#container-iti-cruise #sub-inclusions h2,
+	#container-iti-cruise #sub-inclusions ul,
+	#container-iti-cruise #sub-inclusions ul li {
+		width: 100%;
+	}
+	#component-detail #list-review #l-img {
+		display: none;
+	}
+	#component-detail #list-review #r-review {
+		width: 100%;
+	}
+	#best-cruise #img-cruise {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+	#best-cruise #right-cruise {
+		width: 100%;
+	}
+	#main-cr-link #cr-links {
+		width: 50%;
+		margin-right: 0;
+		padding: 0 10px
+	}
+	#main-catdes #content-catdes {
+		padding: 30px 10px;
+	}
+	#main-also-des #des {
+		width: 50%;
+		margin-right: 0;
+		height: auto;
+		padding: 0 10px;
+	} 
+	#main-also-des #des img {
+		height: auto;
+	}
+	#des-ct {
+	    background: none repeat scroll 0 0 #f6f5f3;
+	    float: left;
+	    margin: 0 1% 20px;
+	    width: 48%;
+	}
+	#component-detail #tab-info-detail ul li {
+		float: left !important;
+	}
+	#component-detail #tab-info-detail ul li,
+	#component-detail #tab-info-detail ul li a {
+		width: 100%;
+	}
+	#title-top-tour #left-nametour h2 {
+		font-size: 20px;
+	}
+	#title-top-tour #left-nametour h2 font {
+		margin-bottom: 10px;
+	}
+	#title-top-tour #left-nametour h2 span {
+		margin: 0;
+	}
+	#title-top-tour #r-hotel {
+		float: left;
+		margin-top: 10px;
+	}
+	#fac-pol-hotel #li-txt h4 {
+		width: 35%;
+		margin-right: 2%
+	}
+	#fac-pol-hotel #li-txt p {
+		width: 63%;
+	}
+	#best-tour2 #img-tour,
+	#best-hotel #img-hotel {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	#best-tour2 #right-tour,
+	#best-hotel #right-hotel,
+	#best-hotel #right-hotel #top-t #left-namehotel,
+	#best-hotel #right-hotel #top-t #r-hotel,
+	#best-hotel #right-hotel #top-t #left-namehotel h2,
+	#best-hotel #right-hotel #top-t #left-namehotel #des-hotel {
+		width: 100%;
+	}
+	#info-dt-tour #dt-toptour #code,
+	#info-dt-tour #dt-toptour #act,
+	#info-dt-tour #dt-toptour a.bt-inquiry {
+		width: 100%;
+		float: left;
+		margin-bottom: 10px;
+	}
+	#info-dt-tour #dt-toptour #act span {
+		float: left;
+	}
+	#day-tour table#activities {
+		display: inline-block;
+		overflow: scroll;
+    	width: 100%;
+	}
+	#day-tour table#activities tbody {
+		width: 950px;
+		display: inline-block;
+	}
+	#day-tour #info-day ul {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	#day-tour #info-day img {
+		width: 100%;
+	}
+	#tabs3 > ul {
+	    display: inline-block;
+	    width: 100%;
+	}
+	#box-inclusions {
+		width: 100%;
+		margin: 15px 0;
+		border-right: 0;
+	}
+	#box-travelguide {
+		width: 48%;
+		margin: 0 1% 20px;
+	}
+	#l-dt-travelguide,
+	#r-dt-travelguide {
+		width: 100%;
+		margin-right: 0;
+	}
+	
+}
+/* end max-width 767 */

@@ -1,0 +1,22 @@
+#khung
+  #main
+    #toolbar.toolbar-list
+      %ul
+        %li#toolbar-new
+          %a.toolbar{:href => $url}
+            %span.icon-32-new
+            Thêm mới
+        %li.divider
+        %li#toolbar-help
+          %a.toolbar{:href => "#messages", :rel => "modal"}
+            %span.icon-32-help
+            Trợ giúp
+        %li#toolbar-unpublish
+          %a.toolbar{:href => ""}
+            %span.icon-32-unpublish
+            Đóng
+      .clr
+    .pagetitle.icon-48-nhomtin
+      %h2
+        = $title
+    .clr
