@@ -9,7 +9,7 @@ class Category extends Model
 
   public function product()
     {
-      return $this->hasOne('App\Product', 'hight_id');
+      return $this->hasOne('App\Product', 'high_id');
     }
 
 }

@@ -1,60 +1,60 @@
 @extends('layouts.application')
 @section('title')
-Sàn gỗ - Nội thất Tiến Cường
+Bán chung cư
 @stop
 @section('home')
-#content_main.col-lg-9.col-md-9.col-sm-12.col-xs-12
-  @include('layouts._slider')
-  .boxmain
-    .box-title
-      %h2.titlemain Sản phẩm nổi bật
-      %span.titlemain3
-    .box-sp
-      - foreach ($special as $pro)
-        .col-lg-3.col-md-3.col-sm-6.col-xs-12.bgproduct
-          .boximg
-            .box-img
-              %a{:href => URL::route('show', array($pro->id, $pro->title()))}
-                %img.img-thumbnail.bdimg{:alt => $pro->name, :src => $pro->photos->first()['img'], height: "265px", :title => $pro->name, :alt => $pro->name}/
-            .proName
-              %a{:href => URL::route('show', array($pro->id, $pro->title())), :title => $pro->name}
-                = $pro->name
-            .price_detail
-              %a{:href => URL::route('show', array($pro->id, $pro->title())), :title => $pro->name}
-                = $pro->price
-  .boxmain
-    .box-title
-      %h2.titlemain Sản phẩm được yêu thích
-      %span.titlemain3
-    .box-sp
-      - foreach ($favorites as $pro)
-        .col-lg-3.col-md-3.col-sm-6.col-xs-12.bgproduct
-          .boximg
-            .box-img
-              %a{:href => URL::route('show', array($pro->id, $pro->title()))}
-                %img.img-thumbnail.bdimg{:alt => $pro->name, :src => $pro->photos->first()['img'], height: "265px", :title => $pro->name, :alt => $pro->name}/
-            .proName
-              %a{:href => URL::route('show', array($pro->id, $pro->title())), :title => $pro->name}
-                = $pro->name
-            .price_detail
-              %a{:href => URL::route('show', array($pro->id, $pro->title())), :title => $pro->name}
-                = $pro->price
-  .boxmain
-    .box-title
-      %h2.titlemain Nội thất thông minh
-      %span.titlemain3
-    .box-sp
-      - foreach ($smarts as $pro)
-        .col-lg-3.col-md-3.col-sm-6.col-xs-12.bgproduct
-          .boximg
-            .box-img
-              %a{:href => URL::route('show', array($pro->id, $pro->title()))}
-                %img.img-thumbnail.bdimg{:alt => $pro->name, :src => $pro->photos->first()['img'], height: "265px", :title => $pro->name, :alt => $pro->name}/
-            .proName
-              %a{:href => URL::route('show', array($pro->id, $pro->title())), :title => $pro->name}
-                = $pro->name
-            .price_detail
-              %a{:href => URL::route('show', array($pro->id, $pro->title())), :title => $pro->name}
-                = $pro->price
-  %br/
+- $first = $articles->first()
+.main-content-home
+  .container
+    .row
+      .col-md-12.col-sm-12.home-new
+        .news-list
+          .new-box.col-md-9.col-sm-9
+            %a{:href => URL::route('show', array($first['id'], $first->title())), :title => $first['title']}
+              %img.img-box{style: "height: 360px;object-fit:cover",:alt =>  $first['title'], :src => $first->photos->first()['img']}/
+            %a.box-title{:href => URL::route('show', array($first['id'], $first->title()))}
+              = $first->title
+            %p
+              {!! $first['summary'] !!}
+              %a.more-link{:href => URL::route('show', array($first['id'], $first->title()))} [Xem thêm]
+          .col-md-3.col-sm-3.item-right
+            - foreach ($articles as $key=>$article)
+              - if ($key != 0)
+                .new-right{style: "width:100%"}
+                  .new-item
+                    %li
+                      %a{:href => URL::route('show', array($article->id, $article->title()))}
+                        %img.img-item{:alt => $article->title, :src => $article->photos->first()['img']}/
+                      %a.new-title{:href => URL::route('show', array($article->id, $article->title()))}
+                        = $article->title
+        .main-product
+          - foreach ($categories as $category)
+            - $articles = $category->articles
+            - if ($articles->count() != 0)
+              - $first = $articles->first()
+              .box-product{:style => "padding:0px 0px 0px 0px;border-radius: 10px;"}
+                %h2.title-product
+                  %a{:href => URL::route('show_category', [$category->id, $category->make($category->name)])}
+                    = $category->name
+                .col-md-12.col-sm-12.home-new
+                  .news-list
+                    .new-box.col-md-9.col-sm-9
+                      %a{:href => URL::route('show', array($first['id'], $first->title())), :title => $first['title']}
+                        %img.img-box{style: "height: 360px;object-fit:cover",:alt =>  $first['title'], :src => $first->photos->first()['img']}/
+                      %a.box-title{:href => URL::route('show', array($first['id'], $first->title()))}
+                        = $first->photos->first()['img']
+                      %p
+                        {!! $first['summary'] !!}
+                        %a.more-link{:href => URL::route('show', array($first['id'], $first->title()))} [Xem thêm]
+                    .col-md-3.col-sm-3.item-right
+                      - foreach ($articles as $key=>$article)
+                        - if ($key != 0)
+                          .new-right{style: "width:100%"}
+                            .new-item
+                              %li
+                                %a{:href => URL::route('show', array($article->id, $article->title()))}
+                                  %img.img-item{:alt => $article->title, :src => $article->photos->first()['img']}/
+                                %a.new-title{:href => URL::route('show', array($article->id, $article->title()))}
+                                  = $article->title
+                %a.more-links{:href => URL::route('show_category', [$category->id, $category->make($category->name)])} [Xem tất cả]
 @stop

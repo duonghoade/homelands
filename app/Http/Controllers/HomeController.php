@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Category;
 use App\SubCategory;
-use App\Product;
+use App\Article;
 use App\Contact;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -13,26 +13,23 @@ class HomeController extends Controller
 {
   public function index()
   {
-    $special = Product::where('hight_id', 1)->get();
-    $favorites = Product::where('hight_id', 2)->Get();
-    $smarts = Product::where('hight_id', 3)->Get();
-  	$categories = Category::all();
-    $subs = Category::where('type', 1)->get();
-    $products = Product::all();
-    return view('home', compact('subs', 'products', 'categories', 'special', 'favorites', 'smarts'));
+    $categories = Category::all();
+    $articles = Article::orderBy('created_at', 'DESC')->get();
+    return view('home', compact('articles', 'categories'));
   }
 
   public function show($id, $title)
   {
-    $categories = Category::all();
-    $product = Product::find($id);
-    return view('show', compact('categories', 'product'));
+    $article = Article::find($id);
+    $current = $article->category;
+    $categories = Category::where("id", "!=", $current->id)->get();
+    return view('show', compact('categories', 'article', 'current'));
   }
 
   public function show_category($id,$title)
   {
   	$categories = Category::all();
-    $sub = SubCategory::find($id);
+    $sub = Category::find($id);
     return view('show_category', compact('sub', 'categories'));
   }
    public function contact() {

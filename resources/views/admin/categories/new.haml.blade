@@ -10,22 +10,15 @@
       #tab1.tab-content.default-tab
         %table.input
           %tr
-            %td.label{:width => "120"} Chọn danh mục cha:
-            %td
-              %select{name: 'category_id'}
-                - foreach ($categories as $category)
-                  %option{value: $category->id}
-                    = $category->name
-          %tr
-            %td.label{:width => "120"} Tên danh mục con:
+            %td.label{:width => "120"} Tên danh mục:
             %td
               %input.text-input.medium-input{:name => "name", :type => "text"}/
-          %tr
-            %td.label{:width => "120"} Bài viết mô tả:
-            %td
-              %textarea{name: 'summary'}
-              :javascript
-                CKEDITOR.replace( 'summary' );
+          -# %tr
+          -#   %td.label{:width => "120"} Bài viết mô tả:
+          -#   %td
+          -#     %textarea{name: 'summary'}
+          -#     :javascript
+          -#       CKEDITOR.replace( 'summary' );
         .clear
       #tab2.tab-content
         .clear

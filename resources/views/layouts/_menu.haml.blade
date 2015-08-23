@@ -1,18 +1,16 @@
-- $menus = App\Category::where('img', "1")->get();
-%a#ddsmoothmenu-mobiletoggle.animateddrawer{:href => "#"}
-  %span Danh mục
-#smoothmenu1.ddsmoothmenu3{style: "text-transform: uppercase;"}
-  %ul
-    %li
-      %a{:href => "http://noithattiencuong.vn/"} TRANG CHỦ
-    - foreach ($menus as $menu)
-      %li
-        %a
-          = $menu->name
-        %ul
-          - foreach ($menu->subs as $sub)
+- $menus = App\Category::all();
+.header-navigation#header{style: "z-index:1000"}
+  .container
+    .row
+      %nav.menu-home.clearfix
+        %a#pull{:href => "#"} Menu
+        %ul.menu.clearfix
+          %li.active
+            %a{"data-target" => "/", "data-toggle" => "dropdown", :href => "/"}
+              Trang chủ
+              %span.border-menu
+          - foreach ($menus as $menu)
             %li
-              %a{:href => URL::route('show_category', [$sub->id, $sub->make($sub->name)])}
-                = $sub->name
-    %li
-      %a{:href => URL::route('contact')} Liên Hệ
+              %a{:href => URL::route('show_category', [$menu->id, $menu->make($menu->name)])}
+                = $menu->name
+                %span.border-menu

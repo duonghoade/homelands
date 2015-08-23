@@ -2,28 +2,26 @@
 @section('main')
 @include('layouts._admin_header', array('title'=>"Danh Muc Sản phẩm", 'url' => URL::route('new_category')))
 .content-box
-  - foreach ($categories as $category)
-    .content-box-header
-      .title{style: "text-align: left !important; font-size: 18px; padding: 10px;"}
-        = $category->name
-    %table{style: "margin-left: 20px; width: 90% !important"}
-      %thead
-        %th Tên danh mục con
-        %th Ảnh đại diện
-        %th Xử lý
-      %tbody
-        - foreach ($category->subs as $sub)
+  .content-box-header
+    .clear
+  .content-box-content
+    #tab1.tab-content.default-tab
+      %table{:width => "100%"}
+        %thead
           %tr
-            %td{width: "200px"}
-              %a{:href => URL::route('all_product_category', array($sub->id))}
-                = $sub->name
-            %td
-              %img{src: $sub->img}
-            %td
-              %a{href: URL::route('edit_category', array($sub->id))}
-                = "Sửa |"
-              %a{href: URL::route('delete_category', array($sub->id))}
-                = " Xóa |"
-              %a{href: URL::route('new_product_category', array($sub->id))}
-                = " Thêm sản phẩm"
+            %th{:width => "2%"} STT
+            %th Tên danh mục
+            %th Xử lý
+        %tbody
+          - foreach ($categories as $category)
+            %tr
+              %td
+                = $category->id
+              %td
+                = $category->name
+              %td
+                %a{href: URL::route('edit_category', array($category->id))}
+                  = "Sửa |"
+                %a{href: URL::route('delete_category', array($category->id))}
+                  = " Xóa"
 @stop

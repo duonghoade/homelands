@@ -1,0 +1,64 @@
+@extends('layouts.admin')
+@section('main')
+%form#HangAddForm{"accept-charset" => "utf-8", :action => URL::route('update_product', array($article->id)), :enctype => "multipart/form-data", :method => "post", :name => "image"}
+  @include('layouts._admin_header_submit', array('title' => "Sửa bài viết"))
+  .content-box
+    .content-box-header
+      %h3 Sửa bài viết
+      .clear
+    .content-box-content
+      #tab1.tab-content.default-tab
+        %table.input
+          %tr
+            %td.label{:width => "120"} Chọn danh mục:
+            %td
+              %select{name: 'category', id: "category"}
+                %option{value: $sub->id}
+                  = $sub->name
+                - foreach ($categories as $category)
+                  %option{value: $category->id}
+                    = $category->name
+          %tr
+            %td.label{:width => "120"} Tiêu đề bài viết:
+            %td
+              %input.text-input.medium-input{:name => "title", :type => "text", value: $article->title}/
+          %tr
+            %td.label{:width => "120"} Ảnh hiện tại:
+            %td
+              %img{:src => $article->photos->first()['img'], width: "150px"}/
+          %tr
+            %td.label{:width => "120"} Chọn ảnh mới(hoặc để trống):
+            %td
+              %input{:name => "img", :type => "file", :required => true}/
+          %tr
+            %td.label{:width => "120"} Mô tả ngắn:
+            %td
+              %textarea{name: 'summary'}
+                = $article->summary
+              :javascript
+                CKEDITOR.replace( 'summary', {
+                  filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+                  filebrowserBrowseUrl: '/laravel-filemanager?type=Files'
+                });
+          %tr
+            %td.label{:width => "120"} Nội dung bài viết:
+            %td
+              %textarea{name: 'content'}
+                = $article->content
+              :javascript
+                CKEDITOR.replace( 'content', {
+                  filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+                  filebrowserBrowseUrl: '/laravel-filemanager?type=Files'
+                });
+          %tr
+            %td.label{:width => "120"} Mô tả SEO:
+            %td
+              %input.text-input.medium-input{:name => "meta_description", :type => "text", value: $article->meta_description}/
+          %tr
+            %td.label{:width => "120"} Keywords SEO:
+            %td
+              %input.text-input.medium-input{:name => "meta_keyworks", :type => "text", value: $article->meta_keyworks}/
+        .clear
+      #tab2.tab-content
+        .clear
+@stop

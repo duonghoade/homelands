@@ -2,24 +2,24 @@
 namespace App;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Article extends Model
 {
-  protected $table = 'products';
-  protected $fillable = ['name', 'summary', 'price', 'unit', 'code', 'subcategory_id', 'guarantee', 'thick', 'hight_id'];
+  protected $table = 'articles';
+  protected $fillable = ['title', 'summary', 'category_id', 'guarantee', 'content', 'meta_description', 'meta_keyworks', 'avatar'];
 
-  public function sub_category()
+  public function category()
   {
-    return $this->belongsTo('App\SubCategory');
+    return $this->belongsTo('App\Category');
   }
 
   public function high()
   {
-    return $this->belongsTo('App\HighLight', 'hight_id');
+    return $this->belongsTo('App\HighLight', 'high_id');
   }
 
   public function photos()
   {
-    return $this->hasMany('App\Photo', 'product_id');
+    return $this->hasMany('App\Photo');
   }
 
   public static function make($str){
@@ -53,7 +53,7 @@ class Product extends Model
   }
 
   public function title(){
-    $str = $this->name;
+    $str = $this->title;
     if(!$str) return false;
     $unicode = array(
         'a'=>array('á','à','ả','ã','ạ','ă','ắ','ặ','ằ','ẳ','ẵ','â','ấ','ầ','ẩ','ẫ','ậ'),

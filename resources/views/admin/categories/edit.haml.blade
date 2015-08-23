@@ -1,38 +1,18 @@
 @extends('layouts.admin')
 @section('main')
 %form#HangAddForm{"accept-charset" => "utf-8", :action => URL::route('update_category', array($sub->id)), :enctype => "multipart/form-data", :method => "post", :name => "image"}
-  @include('layouts._admin_header_submit', array('title' => "Thêm danh mục sản phẩm"))
+  @include('layouts._admin_header_submit', array('title' => "Sửa danh mục bài viết"))
   .content-box
     .content-box-header
-      %h3 Sửa danh mục con
+      %h3 Sửa danh mục
       .clear
     .content-box-content
       #tab1.tab-content.default-tab
         %table.input
           %tr
-            %td.label{:width => "120"} Danh mục cha hiện tại:
-            %td
-              = $sub->category->name
-          %tr
-            %td.label{:width => "120"} Chọn danh mục cha mới:
-            %td
-              %select{name: 'category_id'}
-                - foreach ($categories as $category)
-                  %option{value: $category->id}
-                    = $category->name
-          %tr
             %td.label{:width => "120"} Tên danh mục con:
             %td
               %input.text-input.medium-input{:name => "name", :type => "text", value: $sub->name}/
-          %tr
-            %td.label{:width => "120"} Bài viết mô tả:
-            %td
-              %textarea{name: 'summary'}
-                = $sub->summary
-              :javascript
-                CKEDITOR.replace( 'summary',{
-                  height: 700
-                } );
         .clear
       #tab2.tab-content
         .clear

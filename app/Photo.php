@@ -5,11 +5,11 @@ use Illuminate\Database\Eloquent\Model;
 class Photo extends Model
 {
   protected $table = 'photos';
-  protected $fillable = ['img', 'product_id'];
+  protected $fillable = ['img', 'article_id'];
 
-  public function product()
+  public function article()
   {
-    return $this->belongsTo('App\Product', 'product_id');
+    return $this->belongsTo('App\Article', 'article_id');
   }
 
 }

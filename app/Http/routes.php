@@ -30,12 +30,12 @@ Route::get('/quynhquanly/them-san-pham/{sub_id}', array('as'=>'new_product_categ
 Route::post('/quynhquanly/tao-san-pham/{sub_id}', array('as'=>'create_product_category', 'uses' => 'AdminController@createProductToSubCategory'));
 Route::get('/quynhquanly/danh-muc-con/{sub_id}/san-pham.html', array('as'=>'all_product_category', 'uses' => 'AdminController@listProductOfCategory'));
 
-Route::get('/quynhquanly/tat-ca-san-pham.html', array('as'=>'products', 'uses' => 'AdminController@listProduct'));
-Route::get('/quynhquanly/them-moi-san-pham.html', array('as'=>'new_product', 'uses' => 'AdminController@newProduct'));
-Route::get('/quynhquanly/sua-san-pham/{id}', array('as'=>'edit_product', 'uses' => 'AdminController@editProduct'));
-Route::get('/quynhquanly/xoa-san-pham/{id}', array('as'=>'delete_product', 'uses' => 'AdminController@deleteProduct'));
-Route::post('/quynhquanly/tao-san-pham.html', array('as'=>'create_product', 'uses' => 'AdminController@createProduct'));
-Route::post('/quynhquanly/update-san-pham/{id}', array('as'=>'update_product', 'uses' => 'AdminController@updateProduct'));
+Route::get('/quynhquanly/tat-ca-san-pham.html', array('as'=>'articles', 'uses' => 'AdminController@listArticle'));
+Route::get('/quynhquanly/them-moi-san-pham.html', array('as'=>'new_product', 'uses' => 'AdminController@newArticle'));
+Route::get('/quynhquanly/sua-san-pham/{id}', array('as'=>'edit_product', 'uses' => 'AdminController@editArticle'));
+Route::get('/quynhquanly/xoa-san-pham/{id}', array('as'=>'delete_product', 'uses' => 'AdminController@deleteArticle'));
+Route::post('/quynhquanly/tao-san-pham.html', array('as'=>'create_product', 'uses' => 'AdminController@createArticle'));
+Route::post('/quynhquanly/update-san-pham/{id}', array('as'=>'update_product', 'uses' => 'AdminController@updateArticle'));
 
 Route::get('/quynhquanly/get-subcategory', array('as'=>'get_subcategory', 'uses' => 'AdminController@getSubCategory'));
 
@@ -46,3 +46,8 @@ Route::get('/quynhquanly/xoa-san-pham-noi-bat/{id}.html', array('as'=>'delete_hi
 
 Route::get('/quynhquanly/san-pham-yeu-thich.html', array('as'=>'index_favorite', 'uses' => 'AdminController@indexFavorite'));
 Route::get('/quynhquanly/san-pham-thong-minh.html', array('as'=>'index_smart', 'uses' => 'AdminController@indexSmart'));
+// Route::get('/laravel-filemanager', 'LfmController@show');
+// Route::post('/laravel-filemanager/upload', 'LfmController@upload');
+Route::group(array('middleware' => ''), function(){
+    Route::controller('filemanager', 'FilemanagerLaravelController');
+});

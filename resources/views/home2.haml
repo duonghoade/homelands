@@ -1,0 +1,53 @@
+@extends('layouts.application')
+@section('title')
+Bán chung cư
+@stop
+@section('home')
+- $first = $articles->first()
+.main-content-home
+  .container
+    .row
+      .col-md-12.col-sm-12.home-new
+        .news-list
+          .new-box.col-md-7.col-sm-9
+            %a{:href => URL::route('show', array($first['id'], $first->title())), :title => $first['title']}
+              %img.img-box{:alt => "img-1", :src => $first->photos->first()['img']}/
+            %a.box-title{:href => URL::route('show', array($first['id'], $first->title()))}
+              = $first['title']
+            %p
+              {!! $first['summary'] !!}
+              %a.more-link{:href => "#"} [Xem thêm]
+          .col-md-5.col-sm-3.item-right
+            - foreach ($articles as $key=>$article)
+              - if ($key != 0)
+                .new-right
+                  .new-item
+                    %li
+                      %a{:href => URL::route('show', array($article->id, $article->title()))}
+                        %img.img-item{:alt => "img-2", :src => $article->photos->first()['img']}/
+                      %a.new-title{:href => URL::route('show', array($article->id, $article->title()))}
+                        = $article->title
+      - foreach ($categories as $category)
+        .col-md-12.col-sm-12
+          %h2.title{style: "text-align:left;padding-left:10px;color:white"}
+            = $category->name
+          .news-list
+            .new-box.col-md-7.col-sm-9
+              %a{:href => URL::route('show', array($first['id'], $first->title())), :title => $first['title']}
+                %img.img-box{:alt => "img-1", :src => $first->photos->first()['img']}/
+              %a.box-title{:href => URL::route('show', array($first['id'], $first->title()))}
+                = $first['title']
+              %p
+                {!! $first['summary'] !!}
+                %a.more-link{:href => "#"} [Xem thêm]
+            .col-md-5.col-sm-3.item-right
+              - foreach ($articles as $key=>$article)
+                - if ($key != 0)
+                  .new-right
+                    .new-item
+                      %li
+                        %a{:href => URL::route('show', array($article->id, $article->title()))}
+                          %img.img-item{:alt => "img-2", :src => "images/img-2.jpg"}/
+                        %a.new-title
+                          = $article->title
+@stop

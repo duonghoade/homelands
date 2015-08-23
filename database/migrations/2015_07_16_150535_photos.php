@@ -15,8 +15,8 @@ class Photos extends Migration
         Schema::create('photos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('img');
-            $table->integer('product_id')->unsigned()->default(0);
-            $table->foreign("product_id")->references("id")->on("products")->onDelete("cascade");
+            $table->integer('article_id')->unsigned()->default(0);
+            $table->foreign("article_id")->references("id")->on("articles")->onDelete("cascade");
             $table->timestamps();
         });
     }

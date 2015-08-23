@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Category;
 use App\SubCategory;
-use App\Product;
+use App\Article;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -30,49 +30,44 @@ class AdminController extends Controller
   
   public function createSubCategory()
   {
-    $category = Category::find(\Input::get('category_id'));
-    $category->subs()->create([
-      'name' => \Input::get('name'),
-      'summary' => \Input::get('summary')
+    Category::create([
+      'name' => \Input::get('name')
       ]);
     return \Redirect::route('admin');
   }
 
   public function updateSubCategory($id)
   {
-    $sub = SubCategory::find($id);
+    $sub = Category::find($id);
     $sub->update([
-      'category_id' => \Input::get('category_id'),
-      'name' => \Input::get('name'),
-      'summary' => \Input::get('summary')
+      'name' => \Input::get('name')
       ]);
     return \Redirect::route('categories');
   }
 
   public function editSubCategory($id)
   {
-    $categories = Category::all();
-    $sub = SubCategory::find($id);
-    return view('admin.categories.edit', compact('sub', 'categories'));
+    $sub = Category::find($id);
+    return view('admin.categories.edit', compact('sub'));
   }
 
   public function deleteSubCategory($id)
   {
-    $sub = SubCategory::find($id);
+    $sub = Category::find($id);
     $sub->delete();
     return \Redirect::back();
   }
 
-  public function newProductToSubCategory($sub_id)
+  public function newArticleToSubCategory($sub_id)
   {
     $sub = SubCategory::find($sub_id);
-    return view('admin.categories.add_product', compact('sub'));
+    return view('admin.categories.add_Article', compact('sub'));
   }
 
-  public function createProductToSubCategory($sub_id)
+  public function createArticleToSubCategory($sub_id)
   {
     $sub = SubCategory::find($sub_id);
-    $product = $sub->products()->create([
+    $Article = $sub->Articles()->create([
       'name' => \Input::get('name'),
       'thick' => \Input::get('thick'),
       'price' => \Input::get('price'),
@@ -82,68 +77,69 @@ class AdminController extends Controller
 
     $file = \Input::file('img');
     if ($file) {
-      $filename = $product->id.".".$file->getClientOriginalExtension();
-      $file->move(public_path().'/products/', $filename);
-      $product->photos()->create([
-        'img' => '/products/'.$filename
+      $filename = $Article->id.".".$file->getClientOriginalExtension();
+      $file->move(public_path().'/Articles/', $filename);
+      $Article->photos()->create([
+        'img' => '/Articles/'.$filename
       ]);
     }
-    return \Redirect::route('products');
+    return \Redirect::route('Articles');
   }
 
-  public function listProductOfCategory($sub_id)
+  public function listArticleOfCategory($sub_id)
   {
     $sub = SubCategory::find($sub_id);
-    $products = $sub->products;
-    return view('admin.categories.product', compact('products'));
+    $Articles = $sub->Articles;
+    return view('admin.categories.Article', compact('Articles'));
   }
 
-  public function listProduct()
+  public function listArticle()
   {
-    $products = Product::all();
-    return view('admin.products.index', compact('products'));
+    $articles = Article::all();
+    return view('admin.articles.index', compact('articles'));
   }
 
-  public function newProduct()
+  public function newArticle()
   {
     $categories = Category::all();
-    return view('admin.products.new', compact('categories'));
+    return view('admin.articles.new', compact('categories'));
   }
 
-  public function createProduct()
+  public function createArticle()
   {
-    $sub = SubCategory::find(\Input::get('subcategory_id'));
-    $product = $sub->products()->create([
-      'name' => \Input::get('name'),
-      'thick' => \Input::get('thick'),
-      'price' => \Input::get('price'),
-      'guarantee' => \Input::get('guarantee'),
-      'summary' => \Input::get('summary')
+    $sub = Category::find(\Input::get('category'));
+    $article = $sub->articles()->create([
+      'title' => \Input::get('title'),
+      'content' => \Input::get('content'),
+      'summary' => \Input::get('summary'),
+      'meta_keyworks' => \Input::get('meta_keyworks'),
+      'meta_description' => \Input::get('meta_description')
     ]);
+
 
     $file = \Input::file('img');
     if ($file) {
-      $filename = $product->id.".".$file->getClientOriginalExtension();
-      $file->move(public_path().'/products/', $filename);
-      $product->photos()->create([
-        'img' => '/products/'.$filename
+      $filename = $article->id.".".$file->getClientOriginalExtension();
+      $file->move(public_path().'/articles/', $filename);
+      $article->photos()->create([
+        'img' => '/articles/'.$filename
       ]);
     }
-    return \Redirect::route('products');
+    return \Redirect::route('articles');
   }
 
-  public function editProduct($id)
+  public function editArticle($id)
   {
     $categories = Category::all();
-    $product = Product::find($id);
-    $sub = $product->sub_category;
-    return view('admin.products.edit', compact('product', 'categories', 'sub'));
+    $article = Article::find($id);
+    $sub = $article->category;
+    return view('admin.Articles.edit', compact('article', 'categories', 'sub'));
   }
 
-  public function updateProduct($id)
+  public function updateArticle($id)
   {
-    $product = Product::find($id);
-    $product->update([
+    $Article = Article::find($id);
+    $Article->update([
       'name' => \Input::get('name'),
       'thick' => \Input::get('thick'),
       'price' => \Input::get('price'),
@@ -154,61 +150,61 @@ class AdminController extends Controller
 
     $file = \Input::file('img');
     if ($file) {
-      $filename = $product->id.".".$file->getClientOriginalExtension();
-      $file->move(public_path().'/products/', $filename);
-      $product->update([
-        'img' => '/products/'.$filename
+      $filename = $Article->id.".".$file->getClientOriginalExtension();
+      $file->move(public_path().'/Articles/', $filename);
+      $Article->update([
+        'img' => '/Articles/'.$filename
       ]);
     }
-    return \Redirect::route('products');
+    return \Redirect::route('Articles');
   }
 
-  public function deleteProduct($id)
+  public function deleteArticle($id)
   {
-    $product = Product::find($id);
-    $product->delete();
+    $Article = Article::find($id);
+    $Article->delete();
     return \Redirect::back();
   }
 
   public function newHigh()
   {
-    $products = Product::all();
-    return view('admin.high.new', compact('products'));
+    $Articles = Article::all();
+    return view('admin.high.new', compact('Articles'));
   }
 
   public function createHigh()
   {
     $type = \Input::get('type');
-    $product = Product::find(\Input::get('product_id'));
-    $product->update(['hight_id' => $type]);
+    $Article = Article::find(\Input::get('Article_id'));
+    $Article->update(['high_id' => $type]);
     return \Redirect::route('index_high');
   }
 
   public function indexHigh()
   {
     $type = 1;
-    $products = Product::where('hight_id', $type)->get();
-    return view('admin.high.index', compact('products', 'type'));
+    $Articles = Article::where('high_id', $type)->get();
+    return view('admin.high.index', compact('Articles', 'type'));
   }
 
   public function indexFavorite()
   { 
     $type = 2;
-    $products = Product::where('hight_id', $type)->get();
-    return view('admin.high.index', compact('products', 'type'));
+    $Articles = Article::where('high_id', $type)->get();
+    return view('admin.high.index', compact('Articles', 'type'));
   }
 
   public function indexSmart()
   {
     $type = 3;
-    $products = Product::where('hight_id', $type)->get();
-    return view('admin.high.index', compact('products', 'type'));
+    $Articles = Article::where('high_id', $type)->get();
+    return view('admin.high.index', compact('Articles', 'type'));
   }
 
   public function deleteHigh($id)
   {
-    $product = Product::find($id);
-    $product->update(['hight_id' => 0]);
+    $Article = Article::find($id);
+    $Article->update(['high_id' => 0]);
     return \Redirect::route('index_high');
   }
 }
