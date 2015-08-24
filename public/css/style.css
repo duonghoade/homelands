@@ -170,7 +170,8 @@ body{
 }
 .header-navigation ul{
 	overflow: hidden;
-	z-index: 9;
+	position: relative;
+	z-index: 9999;
 }
 .header-navigation ul >li{
 	display: inline-block;
@@ -599,7 +600,7 @@ body{
 
 .pre-footer{
 	margin-top: 30px;
-	background-color: #eee;
+	background-color: #222;
 }
 .footer-middle{
 	padding-bottom: 30px;
@@ -608,9 +609,9 @@ body{
 }
 .footer-middle h2{
 	//border-bottom: 1px solid #e1e1e1;
-	color: #292929;
+	color: #FFFFFF;
 	padding: 0 0 10px 0;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	position: relative;
 	margin: 0 0 10px 0;
@@ -645,9 +646,14 @@ body{
 .footer-middle ul li:hover a{
 	color: #ed1c24;
 }
+.footer-dc ul li {
+	color: white;
+	font-size: 15px;
+}
 .footer-middle ul li a{
-	color: #666;
-	transition: all 0.3s ease-out 0s;
+	color: #D2D2D2;
+    transition: all 0.3s ease-out 0s;
+    font-size: 13px;
 }
 .footer-middle ul li a:hover{
 	text-decoration: none;
@@ -659,7 +665,7 @@ body{
 	margin-left: 10px;
 }
 .footer-copyright{
-	background-color: #ddd;
+	background-color: #000;
 	padding: 20px 0 15px;
 }
 .copy-right span{

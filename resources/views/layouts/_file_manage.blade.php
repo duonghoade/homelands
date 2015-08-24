@@ -1,9 +1,9 @@
 <script type="text/javascript" src="/tinymce/tinymce.min.js"></script>
 <script type="text/javascript" src="/tinymce/tinymce_editor.js"></script>
 <script type="text/javascript">
-editor_config.selector = "textarea";
-editor_config.path_absolute = "http://localhost:8000/quynhquanly";
-tinymce.init(editor_config);
+  editor_config.selector = "textarea";
+  editor_config.path_absolute = "http://localhost:8000/admini/";
+  tinymce.init(editor_config);
 </script>
     <script type="text/javascript">
       // File Picker modification for FCK Editor v2.0 - www.fckeditor.net
@@ -14,7 +14,7 @@ tinymce.init(editor_config);
      {
           urlobj = obj;
           OpenServerBrowser(
-          'http://laravel-filemanager.rhcloud.com/filemanager/show',
+          'http://localhost:8000/admini/filemanager/show',
           screen.width * 0.7,
           screen.height * 0.7 ) ;
      }
@@ -35,7 +35,7 @@ tinymce.init(editor_config);
      {
         // var a = url.split("/");
         // if(a.length>0) url = a[a.length -1 ];
-        url = url.replace("http://laravel-filemanager.rhcloud.com/filemanager/userfiles/", "");
+        url = url.replace("http://localhost:8000/admini/filemanager/userfiles/", "");
           document.getElementById(urlobj).value = url ;
           oWindow = null;
      }

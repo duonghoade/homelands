@@ -1,0 +1,32 @@
+@extends('layouts.application')
+@section('title')
+Đăng nhập
+@stop
+@section('home')
+.container
+  .row
+    .page-header
+      %h2 Đăng nhập
+  .container-fluid
+    .row
+      %form.form-horizontal{:action => URL::to('/auth/login'), :method => "POST", :role => "form"}
+        .form-group
+          %label.col-md-4.control-label E-Mail Address
+          .col-md-6
+            %input.form-control{:name => "email", :type => "email"}/
+        .form-group
+          %label.col-md-4.control-label Password
+          .col-md-6
+            %input.form-control{:name => "password", :type => "password"}/
+        .form-group
+          .col-md-6.col-md-offset-4
+            .checkbox
+              %label
+                %input{:name => "remember", :type => "checkbox"}/
+                Remember Me
+        .form-group
+          .col-md-6.col-md-offset-4
+            %button.btn.btn-primary{:style => "margin-right: 15px;", :type => "submit"}
+              Login
+            %a{:href => URL::to('/password/email')} Forgot Your Password?
+@endsection

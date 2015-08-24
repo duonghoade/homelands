@@ -9,7 +9,8 @@
         "laravel/framework": "5.1.*",
         "bkwld/laravel-haml": "~2.0",
         "intervention/image": "2.*",
-        "tsawler/laravel-filemanager": "^0.5.3"
+        "tsawler/laravel-filemanager": "^0.5.3",
+        "pqb/filemanager-laravel": "2.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

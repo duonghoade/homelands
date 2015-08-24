@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ab42bb09885ccc042bd8fb7a290f3ec8",
+    "hash": "1a58e2532c088d03a319c4d621fed119",
     "packages": [
         {
             "name": "bkwld/laravel-haml",
@@ -1011,6 +1011,44 @@
                 "php"
             ],
             "time": "2015-07-14 17:31:05"
+        },
+        {
+            "name": "pqb/filemanager-laravel",
+            "version": "2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guillermomartinez/filemanager-laravel.git",
+                "reference": "a44b229fde5070f5573d394143efc97608c1252f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guillermomartinez/filemanager-laravel/zipball/a44b229fde5070f5573d394143efc97608c1252f",
+                "reference": "a44b229fde5070f5573d394143efc97608c1252f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.0.*|5.1.*",
+                "intervention/image": "2.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Pqb\\FilemanagerLaravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guillermo M.",
+                    "email": "guille_55_88@hotmail.com"
+                }
+            ],
+            "description": "Filemanager for Laravel",
+            "time": "2015-07-28 20:25:37"
         },
         {
             "name": "psr/http-message",

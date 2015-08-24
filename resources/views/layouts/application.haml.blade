@@ -1,8 +1,11 @@
 !!!
 %html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
-    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
-    %title Hoang Anh
+    %meta{:content => "width=device-width, initial-scale=1.0, user-scalable=no", :name => "viewport"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "noindex,follow", :name => "robots"}/
+    %meta{:content => "Tư vấn mua bán, cho thuê chung cư Times City, Royal City, biệt thự Vinhomes River side giá tốt nhất thị trường. Liên hệ Hotline: 0987.468.699", :name => "description"}/
+    %title @yield('title')
     %link{:href => "/css/style.css", :rel => "stylesheet"}/
     %link{:href => "/css/responsive.css", :rel => "stylesheet"}/
     %link{:href => "/css/max-width-1199.css", :rel => "stylesheet"}/
@@ -21,7 +24,6 @@
     %script{:src => "/jquery/superslide.2.1.js", :type => "text/javascript"}
     %script{:src => "/jquery/jquery.scrollbox.js"}
     %script{:src => "/bootstrap.3.2.0/js/bootstrap.min.js"}
-    %script{:src => "/https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", :type => "text/javascript"}
     %script{:src => "/js/jquery.sticky.js", :type => "text/javascript"}
     :javascript
       $(window).load(function(){
@@ -97,147 +99,25 @@
               %ul.brands-item
                 %li
                   %a{:href => "#"}
-                    %img{:alt => "ic-brands", :src => "images/ic-brands.gif", :title => "ic-brands"}/
+                    %img{:alt => "ic-brands", :src => "/images/ic-brands.gif", :title => "ic-brands"}/
                 %li
                   %a{:href => "#"}
-                    %img{:alt => "ic-brands", :src => "images/ic-brands.gif", :title => "ic-brands"}/
+                    %img{:alt => "ic-brands", :src => "/images/ic-brands.gif", :title => "ic-brands"}/
                 %li
                   %a{:href => "#"}
-                    %img{:alt => "ic-brands", :src => "images/ic-brands.gif", :title => "ic-brands"}/
+                    %img{:alt => "ic-brands", :src => "/images/ic-brands.gif", :title => "ic-brands"}/
                 %li
                   %a{:href => "#"}
-                    %img{:alt => "ic-brands", :src => "images/ic-brands.gif", :title => "ic-brands"}/
+                    %img{:alt => "ic-brands", :src => "/images/ic-brands.gif", :title => "ic-brands"}/
                 %li
                   %a{:href => "#"}
-                    %img{:alt => "ic-brands", :src => "images/ic-brands.gif", :title => "ic-brands"}/
+                    %img{:alt => "ic-brands", :src => "/images/ic-brands.gif", :title => "ic-brands"}/
                 %li
                   %a{:href => "#"}
-                    %img{:alt => "ic-brands", :src => "images/ic-brands.gif", :title => "ic-brands"}/
+                    %img{:alt => "ic-brands", :src => "/images/ic-brands.gif", :title => "ic-brands"}/
                 %li
                   %a{:href => "#"}
-                    %img{:alt => "ic-brands", :src => "images/ic-brands.gif", :title => "ic-brands"}/
+                    %img{:alt => "ic-brands", :src => "/images/ic-brands.gif", :title => "ic-brands"}/
     / END BRANDS
     / BEGIN PRE-FOOTER
-    .pre-footer
-      .container
-        .row
-          / BEGIN BOTTOM INFO BLOCK
-          .footer-middle
-            .col-md-3.col-sm-3.footer-dc
-              %h2 Liên hệ
-              %ul
-                %li
-                  %strong Nguyễn Hoàng Anh
-                %li
-                  %span 58 Trần Thái Tông, Hà Nội
-                %li
-                  %span Mobile:
-                  %a{:href => "#"} 0983 373 819
-                %li
-                  %span Email:
-                  %a{:href => "#"} hoanganh.ctg@gmail.com
-                %li
-                  %span Website:
-                  %a{:href => "#"} www.hoanganh.vn
-            .col-md-3.col-sm-3.footer-kh
-              %h2 Phong thủy
-              %ul
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-            .col-md-3.col-sm-3.footer-kn
-              %h2 Hỏi đáp thắc mắc
-              %ul
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-                %li
-                  %a{:href => "#"} Những điều đại kỵ khi mua lại nhà cũ
-            .col-md-3.col-sm-3.footer-ttw
-              %h2 Video
-              .video
-                %iframe{:allowfullscreen => "", :frameborder => "0", :height => "180", :src => "https://www.youtube.com/embed/e_wsGqBCzrU", :width => "100%"}
-          / END INFO BLOCK
-    / END PRE-FOOTER
-    / BEGIN FOOTER
-    .footer-copyright
-      .container
-        .row
-          / BEGIN COPYRIGHT
-          .col-md-8.col-sm-8.copy-right
-            © 2015
-            %span Hoang Anh
-            All rights reservers. Thiết kế website - xây dựng website bởi
-            %span Hoang Anh
-          .col-md-4.col-sm-4.status
-            .icon-payment
-              %ul
-                %li
-                  %a{:href => "#"}
-                    %img{:alt => "payment", :src => "images/payment.png", :title => "payment"}/
-                %li
-                  %a{:href => "#"}
-                    %img{:alt => "payment", :src => "images/payment.png", :title => "payment"}/
-                %li
-                  %a{:href => "#"}
-                    %img{:alt => "payment", :src => "images/payment.png", :title => "payment"}/
-                %li
-                  %a{:href => "#"}
-                    %img{:alt => "payment", :src => "images/payment.png", :title => "payment"}/
-                %li
-                  %a{:href => "#"}
-                    %img{:alt => "payment", :src => "images/payment.png", :title => "payment"}/
-          / END COPYRIGHT
-    / END FOOTER
-    %script{:src => "jquery/jquery.scrollbox.js"}
-    / BEGIN LayerSlider
-    %script{:src => "jquery/greensock.js", :type => "text/javascript"}
-    / External libraries: GreenSock
-    %script{:src => "jquery/layerslider.transitions.js", :type => "text/javascript"}
-    / LayerSlider script files
-    %script{:src => "jquery/layerslider.kreaturamedia.jquery.js", :type => "text/javascript"}
-    / LayerSlider script files
-    %script{:src => "jquery/js/layerslider-init.js", :type => "text/javascript"}
-    / END LayerSlider
-    :javascript
-      $(function() {  
-        var pull        = $('#pull');  
-          menu        = $('nav ul');  
-          menuHeight  = menu.height();  
-        
-        $(pull).on('click', function(e) {  
-          e.preventDefault();  
-          menu.slideToggle();  
-        });  
-      });
-      
-      $(window).resize(function(){  
-        var w = $(window).width();  
-        if(w > 320 && menu.is(':hidden')) {  
-          menu.removeAttr('style');  
-        }  
-      });
+    @include('layouts._footer')

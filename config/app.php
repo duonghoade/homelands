@@ -137,7 +137,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         'Bkwld\LaravelHaml\ServiceProvider',
-        'Tsawler\Laravelfilemanager\LaravelFilemanagerServiceProvider',
+        'Pqb\FilemanagerLaravel\FilemanagerLaravelServiceProvider',
 
         /*
          * Application Service Providers...
@@ -193,6 +193,7 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+        'FilemanagerLaravel'=> 'Pqb\FilemanagerLaravel\Facades\FilemanagerLaravel',
 
     ],
 

@@ -1,0 +1,38 @@
+@extends('layouts.application')
+@section('title')
+Đăng ký tài khoản
+@stop
+@section('home')
+.container
+  .row
+  .page-header
+    %h2 Đăng ký tài khoản
+.container-fluid
+  .row
+    %form.form-horizontal{:action => URL::to('/auth/register'), :method => "POST", :role => "form"}
+      %input{:name => "_token", :type => "hidden", :value => csrf_token()}/
+      .form-group
+        %label.col-md-4.control-label User name
+        .col-md-6
+          %input.form-control{:name => "name", :type => "text", :value => old('name')}/
+      .form-group
+        %label.col-md-4.control-label Username
+        .col-md-6
+          %input.form-control{:name => "username", :type => "text", :value => old('username')}/
+      .form-group
+        %label.col-md-4.control-label Email
+        .col-md-6
+          %input.form-control{:name => "email", :type => "email", :value => old('email')}/
+      .form-group
+        %label.col-md-4.control-label Password
+        .col-md-6
+          %input.form-control{:name => "password", :type => "password"}/
+      .form-group
+        %label.col-md-4.control-label Confirm Password
+        .col-md-6
+          %input.form-control{:name => "password_confirmation", :type => "password"}/
+      .form-group
+        .col-md-6.col-md-offset-4
+          %button.btn.btn-primary{:type => "submit"}
+            Register
+@endsection

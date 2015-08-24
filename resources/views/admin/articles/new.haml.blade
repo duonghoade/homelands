@@ -32,8 +32,8 @@
               %textarea{name: 'summary'}
               :javascript
                 CKEDITOR.replace( 'summary', {
-                  filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-                  filebrowserBrowseUrl: '/laravel-filemanager?type=Files'
+                  filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+                  filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
                 });
           %tr
             %td.label{:width => "120"} Nội dung bài viết:
@@ -41,8 +41,9 @@
               %textarea{name: 'content'}
               :javascript
                 CKEDITOR.replace( 'content', {
-                  filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-                  filebrowserBrowseUrl: '/laravel-filemanager?type=Files'
+                  height: 700,
+                  filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+                  filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
                 });
           %tr
             %td.label{:width => "120"} Mô tả SEO:
