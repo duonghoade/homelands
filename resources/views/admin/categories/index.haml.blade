@@ -18,10 +18,13 @@
               %td
                 = $category->id
               %td
-                = $category->name
+                %a{:href => URL::route('all_product_category', array($category->id))}
+                  = $category->name
               %td
                 %a{href: URL::route('edit_category', array($category->id))}
                   = "Sửa |"
                 %a{href: URL::route('delete_category', array($category->id))}
-                  = " Xóa"
+                  = " Xóa |"
+                %a{href: URL::route('new_product_category', array($category->id))}
+                  = " Thêm bài viết"
 @stop

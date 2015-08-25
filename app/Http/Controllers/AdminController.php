@@ -31,7 +31,8 @@ class AdminController extends Controller
   public function createSubCategory()
   {
     Category::create([
-      'name' => \Input::get('name')
+      'name' => \Input::get('name'),
+      'content' => \Input::get('content')
       ]);
     return \Redirect::route('admin');
   }
@@ -40,7 +41,8 @@ class AdminController extends Controller
   {
     $sub = Category::find($id);
     $sub->update([
-      'name' => \Input::get('name')
+      'name' => \Input::get('name'),
+      'content' => \Input::get('content')
       ]);
     return \Redirect::route('categories');
   }
@@ -60,37 +62,38 @@ class AdminController extends Controller
 
   public function newArticleToSubCategory($sub_id)
   {
-    $sub = SubCategory::find($sub_id);
-    return view('admin.categories.add_Article', compact('sub'));
+    $sub = Category::find($sub_id);
+    return view('admin.categories.add_article', compact('sub'));
   }
 
   public function createArticleToSubCategory($sub_id)
   {
-    $sub = SubCategory::find($sub_id);
-    $Article = $sub->Articles()->create([
-      'name' => \Input::get('name'),
-      'thick' => \Input::get('thick'),
-      'price' => \Input::get('price'),
-      'guarantee' => \Input::get('guarantee'),
-      'summary' => \Input::get('summary')
+    $sub = Category::find($sub_id);
+    $article = $sub->articles()->create([
+      'title' => \Input::get('title'),
+      'content' => \Input::get('content'),
+      'summary' => \Input::get('summary'),
+      'meta_keyworks' => \Input::get('meta_keyworks'),
+      'meta_description' => \Input::get('meta_description')
     ]);
+
 
     $file = \Input::file('img');
     if ($file) {
-      $filename = $Article->id.".".$file->getClientOriginalExtension();
-      $file->move(public_path().'/Articles/', $filename);
-      $Article->photos()->create([
-        'img' => '/Articles/'.$filename
+      $filename = $article->id.".".$file->getClientOriginalExtension();
+      $file->move(public_path().'/articles/', $filename);
+      $article->photos()->create([
+        'img' => '/articles/'.$filename
       ]);
     }
-    return \Redirect::route('Articles');
+    return \Redirect::route('articles');
   }
 
   public function listArticleOfCategory($sub_id)
   {
-    $sub = SubCategory::find($sub_id);
-    $Articles = $sub->Articles;
-    return view('admin.categories.Article', compact('Articles'));
+    $sub = Category::find($sub_id);
+    $articles = $sub->articles;
+    return view('admin.categories.articles', compact('articles'));
   }
 
   public function listArticle()

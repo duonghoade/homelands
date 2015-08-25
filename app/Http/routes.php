@@ -26,9 +26,9 @@ Route::post('/admini/tao-danh-muc-con.html', array('as'=>'create_category', 'use
 Route::post('/admini/update-danh-muc-con/{id}', array('as'=>'update_category', 'uses' => 'AdminController@updateSubCategory'));
 Route::get('/admini/sua-danh-muc-con/{id}', array('as'=>'edit_category', 'uses' => 'AdminController@editSubCategory'));
 Route::get('/admini/xoa-danh-muc-con/{id}', array('as'=>'delete_category', 'uses' => 'AdminController@deleteSubCategory'));
-Route::get('/admini/them-san-pham/{sub_id}', array('as'=>'new_product_category', 'uses' => 'AdminController@newProductToSubCategory'));
-Route::post('/admini/tao-san-pham/{sub_id}', array('as'=>'create_product_category', 'uses' => 'AdminController@createProductToSubCategory'));
-Route::get('/admini/danh-muc-con/{sub_id}/san-pham.html', array('as'=>'all_product_category', 'uses' => 'AdminController@listProductOfCategory'));
+Route::get('/admini/them-san-pham/{sub_id}', array('as'=>'new_product_category', 'uses' => 'AdminController@newArticleToSubCategory'));
+Route::post('/admini/tao-san-pham/{sub_id}', array('as'=>'create_product_category', 'uses' => 'AdminController@createArticleToSubCategory'));
+Route::get('/admini/danh-muc-con/{sub_id}/san-pham.html', array('as'=>'all_product_category', 'uses' => 'AdminController@listArticleOfCategory'));
 
 Route::get('/admini/tat-ca-san-pham.html', array('as'=>'articles', 'uses' => 'AdminController@listArticle'));
 Route::get('/admini/them-moi-san-pham.html', array('as'=>'new_product', 'uses' => 'AdminController@newArticle'));

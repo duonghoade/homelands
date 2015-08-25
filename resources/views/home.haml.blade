@@ -8,25 +8,26 @@ Tư vấn Mua bán - Cho thuê BĐS Times City, Royal City, Vinhome Riverside
   .container
     .row
       .col-md-12.col-sm-12.home-new
-        .news-list
-          .new-box.col-md-9.col-sm-9
-            %a{:href => URL::route('show', array($first['id'], $first->title())), :title => $first['title']}
-              %img.img-box{style: "height: 360px;object-fit:cover",:alt =>  $first['title'], :src => $first->photos->first()['img']}/
-            %a.box-title{:href => URL::route('show', array($first['id'], $first->title()))}
-              = $first->title
-            %p
-              {!! $first['summary'] !!}
-              %a.more-link{:href => URL::route('show', array($first['id'], $first->title()))} [Xem thêm]
-          .col-md-3.col-sm-3.item-right
-            - foreach ($articles as $key=>$article)
-              - if ($key != 0)
-                .new-right{style: "width:100%"}
-                  .new-item
-                    %li
-                      %a{:href => URL::route('show', array($article->id, $article->title()))}
-                        %img.img-item{:alt => $article->title, :src => $article->photos->first()['img']}/
-                      %a.new-title{:href => URL::route('show', array($article->id, $article->title()))}
-                        = $article->title
+        - if ($first)
+          .news-list
+            .new-box.col-md-9.col-sm-9
+              %a{:href => URL::route('show', array($first['id'], $first->title())), :title => $first['title']}
+                %img.img-box{style: "height: 360px;object-fit:cover",:alt =>  $first['title'], :src => $first->photos->first()['img']}/
+              %a.box-title{:href => URL::route('show', array($first['id'], $first->title()))}
+                = $first->title
+              %p
+                {!! $first['summary'] !!}
+                %a.more-link{:href => URL::route('show', array($first['id'], $first->title()))} [Xem thêm]
+            .col-md-3.col-sm-3.item-right
+              - foreach ($articles as $key=>$article)
+                - if ($key != 0)
+                  .new-right{style: "width:100%"}
+                    .new-item
+                      %li
+                        %a{:href => URL::route('show', array($article->id, $article->title()))}
+                          %img.img-item{:alt => $article->title, :src => $article->photos->first()['img']}/
+                        %a.new-title{:href => URL::route('show', array($article->id, $article->title()))}
+                          = $article->title
         .main-product
           - foreach ($categories as $category)
             - $articles = $category->articles
@@ -42,7 +43,7 @@ Tư vấn Mua bán - Cho thuê BĐS Times City, Royal City, Vinhome Riverside
                       %a{:href => URL::route('show', array($first['id'], $first->title())), :title => $first['title']}
                         %img.img-box{style: "height: 360px;object-fit:cover",:alt =>  $first['title'], :src => $first->photos->first()['img']}/
                       %a.box-title{:href => URL::route('show', array($first['id'], $first->title()))}
-                        = $first->photos->first()['img']
+                        = $first->title
                       %p
                         {!! $first['summary'] !!}
                         %a.more-link{:href => URL::route('show', array($first['id'], $first->title()))} [Xem thêm]

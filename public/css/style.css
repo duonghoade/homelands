@@ -76,7 +76,7 @@ body{
 	//width: 1000px !important;
 }
 .header-top{
-	background: #0E4648;
+	background: #005165;
 	height: 150px;
 	overflow: hidden;
 	padding: 25px 0;
@@ -178,7 +178,7 @@ body{
 	float: left;
 }
 .header-navigation ul >li:hover{
-	background: #181818;
+	background: #DE8D00;
 }
 /*
 .header-navigation ul.menu >li:hover >a:after{
@@ -238,7 +238,7 @@ body{
 	z-index: 10;
 }
 .header-navigation ul li.active{
-	background: #181818;
+	background: #DE8D00;
 }
 .header-navigation ul li.active a{
 	//padding: 0 10px 0 0;

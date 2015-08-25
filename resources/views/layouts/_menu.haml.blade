@@ -14,3 +14,11 @@
               %a{:href => URL::route('show_category', [$menu->id, $menu->make($menu->name)])}
                 = $menu->name
                 %span.border-menu
+          %li
+            %a{:href => '/'}
+              Giới thiệu
+              %span.border-menu
+          %li
+            %a{:href => '/'}
+              Tuyển Dụng
+              %span.border-menu

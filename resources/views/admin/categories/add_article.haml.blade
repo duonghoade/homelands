@@ -1,0 +1,52 @@
+@extends('layouts.admin')
+@section('main')
+%form#HangAddForm{"accept-charset" => "utf-8", :action => URL::route('create_product_category', array($sub->id)), :enctype => "multipart/form-data", :method => "post", :name => "image"}
+  @include('layouts._admin_header_submit', array('title' => "Thêm mới bài viết"))
+  %input#get_subcategory_url{type: "hidden", value: URL::route('get_subcategory')}
+  .content-box
+    .content-box-header
+      %h3 
+        = "Thêm mới bài viết vào ".$sub->name
+      .clear
+    .content-box-content
+      #tab1.tab-content.default-tab
+        %table.input
+          %tr
+            %td.label{:width => "120"} Tiêu đề bài viết:
+            %td
+              %input.text-input.medium-input{:name => "title", :type => "text"}/
+          %tr
+            %td.label{:width => "120"} Ảnh:
+            %td
+              %input{:name => "img", :type => "file", :required => true}/
+          %tr
+            %td.label{:width => "120"} Mô tả ngắn:
+            %td
+              %textarea{name: 'summary'}
+              :javascript
+                CKEDITOR.replace( 'summary', {
+                  filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+                  filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
+                });
+          %tr
+            %td.label{:width => "120"} Nội dung bài viết:
+            %td
+              %textarea{name: 'content'}
+              :javascript
+                CKEDITOR.replace( 'content', {
+                  height: 700,
+                  filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+                  filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
+                });
+          %tr
+            %td.label{:width => "120"} Mô tả SEO:
+            %td
+              %input.text-input.medium-input{:name => "meta_description", :type => "text"}/
+          %tr
+            %td.label{:width => "120"} Keywords SEO:
+            %td
+              %input.text-input.medium-input{:name => "meta_keyworks", :type => "text"}/
+        .clear
+      #tab2.tab-content
+        .clear
+@stop

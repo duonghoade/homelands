@@ -13,12 +13,16 @@
             %td.label{:width => "120"} Tên danh mục:
             %td
               %input.text-input.medium-input{:name => "name", :type => "text"}/
-          -# %tr
-          -#   %td.label{:width => "120"} Bài viết mô tả:
-          -#   %td
-          -#     %textarea{name: 'summary'}
-          -#     :javascript
-          -#       CKEDITOR.replace( 'summary' );
+          %tr
+            %td.label{:width => "120"} Bài viết mô tả:
+            %td
+              %textarea{name: 'content'}
+              :javascript
+                CKEDITOR.replace( 'content', {
+                  height: 700,
+                  filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+                  filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
+                });
         .clear
       #tab2.tab-content
         .clear

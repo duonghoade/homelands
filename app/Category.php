@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
   protected $table = 'categories';
-  protected $fillable = ['name', 'type', 'img'];
+  protected $fillable = ['name', 'type', 'img', 'content'];
 
   public function subs()
   {

@@ -4,33 +4,113 @@
 @stop
 @section('home')
 - $articles = $sub->articles()->orderBy('created_at', 'DESC')->get()
-.main-content-home
+.main-categories-blog
   .container
     .row
-      .col-md-9.col-sm-9.home-new
-        .news-list{:style => "border:none"}
-          - if ($articles->count() != 0)
-            - foreach ($articles as $article)
-              .new-box{style: "padding: 0px 10px;min-height: 180px;border-bottom: 1px solid #ccc;"}
-                %a{:href => URL::route('show', array($article->id, $article->title())), :title => $article->title}
-                  %img.img-box{style: "width: 30%;height:160px", :alt => "img-1", :src => $article->photos->first()['img']}/
-                %a.box-title
-                  = $article->title
-                %p
-                  {!! $article->summary !!}
-          - else
-            Chưa có bài viết
-      .col-md-3.col-sm-3.home-left
-        - foreach ($categories as $category)
-          .top-left.sidebar
+      .col-md-8.col-sm-8.left-blog
+        .content-blog
+          .post-title
             %h2.title
-              = $category->name
-            .content-text
+              = $sub->name
+            %p.post-time
+              %span.post-date
+                %i.fa.fa-clock-o
+                Jul 04, 2015
+              %span.post-comment
+                %a{:href => "#", :title => "Comment on Bán biệt thự Times City"}
+                  %i.fa.fa-comments
+                  0
+          .post-content
+            %h2.content-title
+              = $sub->name
+            {!! $sub->content !!}
+      .col-md-4.col-sm-4.right-blog
+        .post-tt
+          .tt-title
+            %h2 Tin mới nhất
+          .box-item
+            %ul
+              %li
+                %a{:href => "#"}
+                  %img{:src => "/images/img-thumb.jpg"}/
+                  .item-details
+                    %h2
+                      %a{:href => "#"} 10 lý do mua căn hộ Times City
+                    %p.post-time
+                      %span.post-date
+                        %i.fa.fa-clock-o
+                        Jul 04, 2015
+                      %span.post-user
+                        %span.fn
+                          %i.fa.fa-user
+                          %a{:href => "#", :rel => "author", :title => "Posts by admin"} admin
+                    %p.post-content 10 lý do mua căn hộ Times City
+            .box-item
               %ul
-                - foreach ($category->articles as $article)
-                  %li.list-right
-                    %a{:href => URL::route('show', array($article->id, $article->title()))}
-                      %img.img-item{style: "height: 125px;object-fit: cover;", :alt => $article->title, :src => $article->photos->first()['img']}/
-                    %a.new-title
-                      = $article->title
+                %li
+                  %a{:href => "#"}
+                    %img{:src => "/images/img-thumb.jpg"}/
+                    .item-details
+                      %h2
+                        %a{:href => "#"} 10 lý do mua căn hộ Times City
+                      %p.post-time
+                        %span.post-date
+                          %i.fa.fa-clock-o
+                          Jul 04, 2015
+                        %span.post-user
+                          %span.fn
+                            %i.fa.fa-user
+                            %a{:href => "#", :rel => "author", :title => "Posts by admin"} admin
+                      %p.post-content 10 lý do mua căn hộ Times City
+              .box-item
+                %ul
+                  %li
+                    %a{:href => "#"}
+                      %img{:src => "/images/img-thumb.jpg"}/
+                      .item-details
+                        %h2
+                          %a{:href => "#"} 10 lý do mua căn hộ Times City
+                        %p.post-time
+                          %span.post-date
+                            %i.fa.fa-clock-o
+                            Jul 04, 2015
+                          %span.post-user
+                            %span.fn
+                              %i.fa.fa-user
+                              %a{:href => "#", :rel => "author", :title => "Posts by admin"} admin
+                        %p.post-content 10 lý do mua căn hộ Times City
+                .box-item
+                  %ul
+                    %li
+                      %a{:href => "#"}
+                        %img{:src => "/images/img-thumb.jpg"}/
+                        .item-details
+                          %h2
+                            %a{:href => "#"} 10 lý do mua căn hộ Times City
+                          %p.post-time
+                            %span.post-date
+                              %i.fa.fa-clock-o
+                              Jul 04, 2015
+                            %span.post-user
+                              %span.fn
+                                %i.fa.fa-user
+                                %a{:href => "#", :rel => "author", :title => "Posts by admin"} admin
+                          %p.post-content 10 lý do mua căn hộ Times City
+                  .box-item
+                    %ul
+                      %li
+                        %a{:href => "#"}
+                          %img{:src => "/images/img-thumb.jpg"}/
+                          .item-details
+                            %h2
+                              %a{:href => "#"} 10 lý do mua căn hộ Times City
+                            %p.post-time
+                              %span.post-date
+                                %i.fa.fa-clock-o
+                                Jul 04, 2015
+                              %span.post-user
+                                %span.fn
+                                  %i.fa.fa-user
+                                  %a{:href => "#", :rel => "author", :title => "Posts by admin"} admin
+                            %p.post-content 10 lý do mua căn hộ Times City
 @stop
