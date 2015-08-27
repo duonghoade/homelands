@@ -11,14 +11,39 @@
               %span.border-menu
           - foreach ($menus as $menu)
             %li
-              %a{:href => URL::route('show_category', [$menu->id, $menu->make($menu->name)])}
+              %a{:href => URL::route('show_category', [$menu->make($menu->name),$menu->id])}
                 = $menu->name
                 %span.border-menu
-          %li
-            %a{:href => '/'}
-              Giới thiệu
-              %span.border-menu
-          %li
-            %a{:href => '/'}
-              Tuyển Dụng
-              %span.border-menu
+.news-tt
+  .container
+    .row
+      .col-md-8.col-sm-9.tt-wrapper
+        .title-tt Tiêu điểm:
+        %marquee{:align => "center", :bgcolor => "#ccc", :direction => "left", :scrollamount => "5", :width => "100%", :onmouseout => "this.start();", :onmouseover => "this.stop();"}
+          .items-tt
+            - for ($i=0;$i<30;$i++)
+              %a.fa.fa-caret-right{:href => "/"}
+                %span Mở bán tòa vip nhất dự án tại Lotte 54 Liễu Giai 
+              %a.fa.fa-caret-right{:href => "/"}
+                %span Mặt bằng Park 7, 8 
+              %a.fa.fa-caret-right{:href => "/"}
+                %span Mặt bằng Park 2 
+              %a.fa.fa-caret-right{:href => "/"}
+                %span Mặt bằng Park 6 
+              %a.fa.fa-caret-right{:href => "/"}
+                %span Mặt bằng Park 1
+              %a.fa.fa-caret-right{:href => "/"}
+                %span Mặt bằng Park 5
+              %a.fa.fa-caret-right{:href => "/"}
+                %span Bảng giả giá Park 7
+              %a.fa.fa-caret-right{:href => "/"}
+                %span Bảng giá Park 8
+              %a.fa.fa-caret-right{:href => "/"}
+                %span Bảng giá Park 2
+              %a.fa.fa-caret-right{:href => "/"}
+                %span Bảng giá Park 1
+      .col-md-4.col-sm-3.hl-wrapper
+        .hotline
+          %i.fa.fa-mobile
+          %strong Liên hệ Mr.Nam:
+          %span 0963 569 346 - 0902 113 509

@@ -10,52 +10,98 @@ Tư vấn Mua bán - Cho thuê BĐS Times City, Royal City, Vinhome Riverside
       .col-md-12.col-sm-12.home-new
         - if ($first)
           .news-list
-            .new-box.col-md-9.col-sm-9
-              %a{:href => URL::route('show', array($first['id'], $first->title())), :title => $first['title']}
-                %img.img-box{style: "height: 360px;object-fit:cover",:alt =>  $first['title'], :src => $first->photos->first()['img']}/
-              %a.box-title{:href => URL::route('show', array($first['id'], $first->title()))}
-                = $first->title
-              %p
-                {!! $first['summary'] !!}
-                %a.more-link{:href => URL::route('show', array($first['id'], $first->title()))} [Xem thêm]
-            .col-md-3.col-sm-3.item-right
+            .new-box.col-md-8.col-sm-9
+              .box-item
+                - foreach ($articles as $key=>$article)
+                  .new-item
+                    %figure.effect-zoe
+                      %img.img-box{:alt => $article->title, :src => $article->avatar}/
+                      %figcaption
+                        %div
+                          %h2
+                            = $article->title
+                          %p
+                            {!! $article->summary !!}
+                          %a.more-link{:href => URL::route('show', array($article->id, $article->title())), :title => $article->title} [Xem thêm]
+                  -# .new-item
+                  -#   %a{:href => URL::route('show', array($article->id, $article->title())), :title => $article->title}
+                  -#     %img.img-box{style: "height: 360px;object-fit:cover",:alt =>  $article->title, :src => $article->avatar}/
+                  -#   %a.box-title{:href => URL::route('show', array($article->id, $article->title()))}
+                  -#     = $article->title
+                  -#   %p
+                  -#     - if (strlen($article->summary) > 600)
+                  -#       {!! substr($article->summary, 0, 500)."..." !!}
+                  -#     - else
+                  -#       {!! $article->summary !!}
+            .col-md-4.col-sm-3.item-right
               - foreach ($articles as $key=>$article)
-                - if ($key != 0)
+                - if ($key != 0 && $key < 6)
                   .new-right{style: "width:100%"}
                     .new-item
                       %li
                         %a{:href => URL::route('show', array($article->id, $article->title()))}
-                          %img.img-item{:alt => $article->title, :src => $article->photos->first()['img']}/
+                          %img.img-item{:alt => $article->title, :src => $article->avatar}/
                         %a.new-title{:href => URL::route('show', array($article->id, $article->title()))}
                           = $article->title
+                        %p.post-time
+                          %span.post-date
+                            %i.fa.fa-clock-o
+                              = date_format($article->updated_at,"d/m/Y")
+                          %span.post-user
+                            %span.fn
+                              %i.fa.fa-user
+                              %a{:href => "/", :rel => "author", :title => "Posts by admin"} Admin
         .main-product
           - foreach ($categories as $category)
             - $articles = $category->articles
             - if ($articles->count() != 0)
               - $first = $articles->first()
-              .box-product{:style => "padding:0px 0px 0px 0px;border-radius: 10px;"}
-                %h2.title-product
-                  %a{:href => URL::route('show_category', [$category->id, $category->make($category->name)])}
-                    = $category->name
-                .col-md-12.col-sm-12.home-new
-                  .news-list
-                    .new-box.col-md-9.col-sm-9
-                      %a{:href => URL::route('show', array($first['id'], $first->title())), :title => $first['title']}
-                        %img.img-box{style: "height: 360px;object-fit:cover",:alt =>  $first['title'], :src => $first->photos->first()['img']}/
-                      %a.box-title{:href => URL::route('show', array($first['id'], $first->title()))}
-                        = $first->title
-                      %p
-                        {!! $first['summary'] !!}
-                        %a.more-link{:href => URL::route('show', array($first['id'], $first->title()))} [Xem thêm]
-                    .col-md-3.col-sm-3.item-right
-                      - foreach ($articles as $key=>$article)
-                        - if ($key != 0)
-                          .new-right{style: "width:100%"}
-                            .new-item
-                              %li
-                                %a{:href => URL::route('show', array($article->id, $article->title()))}
-                                  %img.img-item{:alt => $article->title, :src => $article->photos->first()['img']}/
-                                %a.new-title{:href => URL::route('show', array($article->id, $article->title()))}
-                                  = $article->title
+              .box-product
+                .title-product
+                  %h2
+                    %span
+                      = $category->name
+                .news-list
+                  .new-box.col-md-8.col-sm-9
+                    %a{:href => URL::route('show', array($first['id'], $first->title())), :title => $first['title']}
+                      %img.img-box{style: "height: 360px;object-fit:cover",:alt =>  $first['title'], :src => $first->avatar}/
+                    %a.box-title{:href => URL::route('show', array($first['id'], $first->title()))}
+                      = $first->title
+                    %p
+                      {!! $first['summary'] !!}
+                      %a.more-link{:href => URL::route('show', array($first['id'], $first->title()))} [Xem thêm]
+                  .col-md-4.col-sm-3.item-right
+                    - foreach ($articles as $key=>$article)
+                      - if ($key != 0)
+                        .new-right{style: "width:100%"}
+                          .new-item
+                            %li
+                              %a{:href => URL::route('show', array($article->id, $article->title()))}
+                                %img.img-item{:alt => $article->title, :src => $article->avatar}/
+                              %a.new-title{:href => URL::route('show', array($article->id, $article->title()))}
+                                = $article->title
+                              %p.post-time
+                                %span.post-date
+                                  %i.fa.fa-clock-o
+                                    = date_format($article->updated_at,"d/m/Y")
+                                %span.post-user
+                                  %span.fn
+                                    %i.fa.fa-user
+                                    %a{:href => "/", :rel => "author", :title => "Posts by admin"} Admin
                 %a.more-links{:href => URL::route('show_category', [$category->id, $category->make($category->name)])} [Xem tất cả]
+%script{:src => "/jquery/jquery.bxslider.js"}
+%script{:src => "/jquery/owl.carousel.min.js"}
+%script{:src => "/bootstrap.3.2.0/js/bootstrap.min.js"}
+:javascript
+  $(document).ready(function(){
+    if (!!$.prototype.bxSlider)
+    slider = $('.box-item').bxSlider({
+      useCSS: false,
+      maxSlides: 1,
+      pager: false,
+      autoHover: true,
+      auto: true,
+      autoControls: true
+    });
+  });
 @stop

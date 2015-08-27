@@ -46,3 +46,6 @@
 [17-Jul-2015 14:24:03 Asia/Ho_Chi_Minh] PHP Fatal error:  Class 'PDO' not found in /home/dxoggofxhosting/public_html/config/database.php on line 16
 [17-Jul-2015 14:24:07 Asia/Ho_Chi_Minh] PHP Warning:  APM cannot be enabled, '/var/php/apm/db' is not directory in Unknown on line 0
 [17-Jul-2015 14:24:07 Asia/Ho_Chi_Minh] PHP Fatal error:  Class 'PDO' not found in /home/dxoggofxhosting/public_html/config/database.php on line 16
+[25-Aug-2015 09:15:26 UTC] PHP Fatal error:  Call to a member function last() on array in /home/vnhomesland/public_html/app/Http/Controllers/HomeController.php on line 32
+[25-Aug-2015 09:17:20 UTC] PHP Fatal error:  Call to a member function last() on array in /home/vnhomesland/public_html/app/Http/Controllers/HomeController.php on line 32
+[25-Aug-2015 09:20:56 UTC] PHP Parse error:  syntax error, unexpected '$sub' (T_VARIABLE) in /home/vnhomesland/public_html/app/Http/Controllers/HomeController.php on line 33

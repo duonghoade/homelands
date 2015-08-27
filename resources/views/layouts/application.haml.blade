@@ -28,7 +28,7 @@
     %script{:src => "/js/jquery.sticky.js", :type => "text/javascript"}
     :javascript
       $(window).load(function(){
-        $("#header").sticky({ topSpacing: 0 });
+        $(".box-brands").sticky({ topSpacing: 0 });
       });
   %body
     @include('layouts._header')
@@ -97,28 +97,36 @@
         .row
           .col-md-12.col-sm-12.brands-site
             .box-brands
-              %ul.brands-item
-                %li
-                  %a{:href => "#"}
-                    %img{:alt => "ic-brands", :src => "/images/ic-brands.gif", :title => "ic-brands"}/
-                %li
-                  %a{:href => "#"}
-                    %img{:alt => "ic-brands", :src => "/images/ic-brands.gif", :title => "ic-brands"}/
-                %li
-                  %a{:href => "#"}
-                    %img{:alt => "ic-brands", :src => "/images/ic-brands.gif", :title => "ic-brands"}/
-                %li
-                  %a{:href => "#"}
-                    %img{:alt => "ic-brands", :src => "/images/ic-brands.gif", :title => "ic-brands"}/
-                %li
-                  %a{:href => "#"}
-                    %img{:alt => "ic-brands", :src => "/images/ic-brands.gif", :title => "ic-brands"}/
-                %li
-                  %a{:href => "#"}
-                    %img{:alt => "ic-brands", :src => "/images/ic-brands.gif", :title => "ic-brands"}/
-                %li
-                  %a{:href => "#"}
-                    %img{:alt => "ic-brands", :src => "/images/ic-brands.gif", :title => "ic-brands"}/
+              %marquee{:align => "center", :direction => "left", :height => "auto", :scrollamount => "4"}
+                %ul.brands-item
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "ic-brands", :src => "/images/doitac1.png", :title => "ic-brands"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "ic-brands", :src => "/images/doitac2.png", :title => "ic-brands"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "ic-brands", :src => "/images/doitac3.png", :title => "ic-brands"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "ic-brands", :src => "/images/doitac4.png", :title => "ic-brands"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "ic-brands", :src => "/images/doitac5.png", :title => "ic-brands"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "ic-brands", :src => "/images/doitac6.png", :title => "ic-brands"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "ic-brands", :src => "/images/doitac7.png", :title => "ic-brands"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "ic-brands", :src => "/images/doitac8.png", :title => "ic-brands"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "ic-brands", :src => "/images/doitac8.png", :title => "ic-brands"}/
+    
     / END BRANDS
     / BEGIN PRE-FOOTER
     @include('layouts._footer')

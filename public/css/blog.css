@@ -122,10 +122,12 @@ body{
     width: 75px;
 }
 .box-item ul li a img{
-	transition: all 0.4s ease 0s;
+	transition: all 0.3s ease-in 0s;
+        width: 100%;
 }
 .box-item ul li a img:hover{
-	transform: scale(1.4) rotate(15deg);
+	transform: scale(1.1);
+    transition: all 0.3s ease-in 0s;
 }
 .box-item ul li .item-details{
 	margin-left: 90px;

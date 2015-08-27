@@ -3,83 +3,112 @@
 = $article->title
 @stop
 @section('home')
-.main-content-home
+.main-categories-blog
   .container
     .row
-      .col-md-9.col-sm-9.home-new{style: "border-right: 1px solid #ccc;"}
-        %h1.box-title
-          = $article->title
-        {!! $article->content !!}
-      .col-md-3.col-sm-3.home-left
-        .top-left.sidebar
-          %h2.title
-            %a{:href => URL::route('show_category', [$current->id, $current->make($current->name)])}
-              = "Cùng danh mục ".$current->name
-          .content-text
-            %ul
-              - foreach ($current->articles as $article)
-                %li.list-right
-                  %a{:href => URL::route('show', array($article->id, $article->title()))}
-                    %img.img-item{style: "height: 60px;object-fit: cover;width:30%;float: left;", :alt => $article->title, :src => $article->photos->first()['img']}/
-                  %a.new-title
-                    = $article->title
-        - foreach ($categories as $category)
-          .top-left.sidebar
+      .col-md-8.col-sm-8.left-blog
+        .content-blog
+          .post-title
             %h2.title
-              %a{:href => URL::route('show_category', [$category->id, $category->make($category->name)])}
-                = $category->name
-            .content-text
+              = $article->title
+            %p.post-time
+              %span.post-date
+                %i.fa.fa-clock-o
+                Jul 04, 2015
+              %span.post-comment
+                %a{:href => "#", :title => "Comment on Bán biệt thự Times City"}
+                  %i.fa.fa-comments
+                  0
+          .post-content
+            %h2.content-title
+            {!! $article->content !!}
+      .col-md-4.col-sm-4.right-blog
+        .post-tt
+          .tt-title
+            %h2 Tin mới nhất
+          .box-item
+            %ul
+              %li
+                %a{:href => "#"}
+                  %img{:src => "/images/img-thumb.jpg"}/
+                  .item-details
+                    %h2
+                      %a{:href => "#"} 10 lý do mua căn hộ Times City
+                    %p.post-time
+                      %span.post-date
+                        %i.fa.fa-clock-o
+                        Jul 04, 2015
+                      %span.post-user
+                        %span.fn
+                          %i.fa.fa-user
+                          %a{:href => "#", :rel => "author", :title => "Posts by admin"} admin
+                    %p.post-content 10 lý do mua căn hộ Times City
+            .box-item
               %ul
-                - foreach ($category->articles as $article)
-                  %li.list-right
-                    %a{:href => URL::route('show', array($article->id, $article->title()))}
-                      %img.img-item{style: "height: 125px;object-fit: cover;", :alt => $article->title, :src => $article->photos->first()['img']}/
-                    %a.new-title
-                      = $article->title
-        -# .middle1-left.sidebar
-        -#   %h2.title Sản phẩm hot - Đầu tư
-        -#   .content-text
-        -#     %li
-        -#       %a{:href => "#"}
-        -#         %img{:src => "images/img-5.jpg"}/
-        -#       %a.title{:href => "#"} Chung cư Lotte 45 Đội Cấn
-        -#     %li
-        -#       %a{:href => "#"}
-        -#         %img{:src => "images/img-5.jpg"}/
-        -#       %a.title{:href => "#"} Chung cư Lotte 45 Đội Cấn
-        -#     %li
-        -#       %a{:href => "#"}
-        -#         %img{:src => "images/img-5.jpg"}/
-        -#       %a.title{:href => "#"} Chung cư Lotte 45 Đội Cấn
-        -# .middle2-left.sidebar
-        -#   %h2.title Nhận định phân tích
-        -#   .content-text
-        -#     %li
-        -#       %a.title{:href => "#"} 4 lý do lựa chọn Mễ Trì Plaza ( Emico VOV Complex)
-        -#     %li
-        -#       %a.title{:href => "#"} Đầu tư Vinpearl Premium của VINGROUP có thực sự hấp dẫn?
-        -#     %li
-        -#       %a.title{:href => "#"} 8 ưu điểm khiến Park Hill Times City là sự lựa chọn số 1 về chung cư Hà Nội
-        -#     %li
-        -#       %a.title{:href => "#"} Có nên mua căn hộ Lotte – Số 45 Đội Cấn thời điểm này ?
-        -# .bottom-left.sidebar
-        -#   %h2.title Count per Day
-        -#   .content-text
-        -#     %ul
-        -#       %li
-        -#         %span.number> 5991
-        -#         Total reads:
-        -#       %li
-        -#         %span.number> 5991
-        -#         Total reads:
-        -#       %li
-        -#         %span.number> 5991
-        -#         Total reads:
-        -#       %li
-        -#         %span.number> 5991
-        -#         Total reads:
-        -#       %li
-        -#         %span.number> 5991
-        -#         Total reads:
-
+                %li
+                  %a{:href => "#"}
+                    %img{:src => "/images/img-thumb.jpg"}/
+                    .item-details
+                      %h2
+                        %a{:href => "#"} 10 lý do mua căn hộ Times City
+                      %p.post-time
+                        %span.post-date
+                          %i.fa.fa-clock-o
+                          Jul 04, 2015
+                        %span.post-user
+                          %span.fn
+                            %i.fa.fa-user
+                            %a{:href => "#", :rel => "author", :title => "Posts by admin"} admin
+                      %p.post-content 10 lý do mua căn hộ Times City
+              .box-item
+                %ul
+                  %li
+                    %a{:href => "#"}
+                      %img{:src => "/images/img-thumb.jpg"}/
+                      .item-details
+                        %h2
+                          %a{:href => "#"} 10 lý do mua căn hộ Times City
+                        %p.post-time
+                          %span.post-date
+                            %i.fa.fa-clock-o
+                            Jul 04, 2015
+                          %span.post-user
+                            %span.fn
+                              %i.fa.fa-user
+                              %a{:href => "#", :rel => "author", :title => "Posts by admin"} admin
+                        %p.post-content 10 lý do mua căn hộ Times City
+                .box-item
+                  %ul
+                    %li
+                      %a{:href => "#"}
+                        %img{:src => "/images/img-thumb.jpg"}/
+                        .item-details
+                          %h2
+                            %a{:href => "#"} 10 lý do mua căn hộ Times City
+                          %p.post-time
+                            %span.post-date
+                              %i.fa.fa-clock-o
+                              Jul 04, 2015
+                            %span.post-user
+                              %span.fn
+                                %i.fa.fa-user
+                                %a{:href => "#", :rel => "author", :title => "Posts by admin"} admin
+                          %p.post-content 10 lý do mua căn hộ Times City
+                  .box-item
+                    %ul
+                      %li
+                        %a{:href => "#"}
+                          %img{:src => "/images/img-thumb.jpg"}/
+                          .item-details
+                            %h2
+                              %a{:href => "#"} 10 lý do mua căn hộ Times City
+                            %p.post-time
+                              %span.post-date
+                                %i.fa.fa-clock-o
+                                Jul 04, 2015
+                              %span.post-user
+                                %span.fn
+                                  %i.fa.fa-user
+                                  %a{:href => "#", :rel => "author", :title => "Posts by admin"} admin
+                            %p.post-content 10 lý do mua căn hộ Times City
 @stop

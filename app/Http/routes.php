@@ -10,10 +10,11 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+Route::pattern('id', '[0-9]+');
+Route::pattern('title', '[\w\-]+');
 Route::get('/', array('as' => 'index', 'uses' => 'HomeController@index'));
 
-Route::get('danh-muc/{id}/{title}.html', array('as'=>'show_category', 'uses' => 'HomeController@show_category'));
+Route::get('/{title}-{id}.html', array('as'=>'show_category', 'uses' => 'HomeController@show_category'));
 Route::get('/san-pham-{id}/{title}.html', array('as'=>'show', 'uses' => 'HomeController@show'));
 Route::get('/lien-he.html', array('as'=>'contact', 'uses' => 'HomeController@contact'));
 Route::post('/tao-lien-he.html', array('as'=>'create_contact', 'uses' => 'HomeController@createContact'));

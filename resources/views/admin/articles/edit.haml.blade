@@ -46,7 +46,8 @@
               %textarea{name: 'content'}
                 = $article->content
               :javascript
-                CKEDITOR.replace( 'summary', {
+                CKEDITOR.replace( 'content', {
+                  height: 700,
                   filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
                   filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
                 });

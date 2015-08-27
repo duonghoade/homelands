@@ -136,30 +136,29 @@ class AdminController extends Controller
     $categories = Category::all();
     $article = Article::find($id);
     $sub = $article->category;
-    return view('admin.Articles.edit', compact('article', 'categories', 'sub'));
+    return view('admin.articles.edit', compact('article', 'categories', 'sub'));
   }
 
   public function updateArticle($id)
   {
     $Article = Article::find($id);
     $Article->update([
-      'name' => \Input::get('name'),
-      'thick' => \Input::get('thick'),
-      'price' => \Input::get('price'),
-      'guarantee' => \Input::get('guarantee'),
+      'title' => \Input::get('title'),
+      'content' => \Input::get('content'),
       'summary' => \Input::get('summary'),
-      'sub_category_id' => \Input::get('subcategory_id')
+      'meta_keyworks' => \Input::get('meta_keyworks'),
+      'meta_description' => \Input::get('meta_description')
     ]);
 
     $file = \Input::file('img');
     if ($file) {
-      $filename = $Article->id.".".$file->getClientOriginalExtension();
-      $file->move(public_path().'/Articles/', $filename);
+      $filename = $Article->id."update".".".$file->getClientOriginalExtension();
+      $file->move(public_path().'/articles/', $filename);
       $Article->update([
-        'img' => '/Articles/'.$filename
+        'img' => '/articles/'.$filename
       ]);
     }
-    return \Redirect::route('Articles');
+    return \Redirect::route('articles');
   }
 
   public function deleteArticle($id)

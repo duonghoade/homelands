@@ -13,7 +13,7 @@ class HomeController extends Controller
 {
   public function index()
   {
-    $categories = Category::all();
+    $categories = Category::orderBy('type', 'ASC')->get();
     $articles = Article::orderBy('created_at', 'DESC')->get();
     return view('home', compact('articles', 'categories'));
   }
@@ -26,9 +26,9 @@ class HomeController extends Controller
     return view('show', compact('categories', 'article', 'current'));
   }
 
-  public function show_category($id,$title)
+  public function show_category($title,$id)
   {
-  	$categories = Category::all();
+    $categories = Category::all();
     $sub = Category::find($id);
     return view('show_category', compact('sub', 'categories'));
   }
